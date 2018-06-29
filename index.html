@@ -12168,18 +12168,17 @@ ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/pilot_data/release/2010_07/exon/snps</p
 </div>
 </div>
 
+<div class="lan_SoS">
    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
-   
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-sos"><pre><span></span><span class="o">%</span><span class="n">cd</span> <span class="n">data</span>
-</pre></div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div><div class="inner_cell" >
+  <div class="input_area cm-s-ipython" style="min-height: 2.31429em">
+   <textarea rows="1"
+      class="sos-source" name="SoS">%cd data</textarea>
+  </div>
+</div>
 
-</div>
-</div>
 </div>
 
 <div class="output_wrapper">
@@ -12192,13 +12191,14 @@ ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/pilot_data/release/2010_07/exon/snps</p
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>/home/gaow/tmp/31-May-2018/data</pre>
+<pre>/home/gaow/Documents/GIT/wiki/ismb-2018/data</pre>
 </div>
 </div>
 
 </div>
 </div>
 
+</div>
 </div>
 
 
@@ -12312,18 +12312,17 @@ Use &#39;vtools cmd -h&#39; for details about each command. Please contact Bo Pe
 </div>
 </div>
 
+<div class="lan_Bash">
    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
-   
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-sos"><pre><span></span><span class="n">vtools</span> <span class="n">init</span> <span class="n">VATDemo</span>
-</pre></div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div><div class="inner_cell" >
+  <div class="input_area cm-s-ipython" style="min-height: 2.31429em">
+   <textarea rows="1"
+      class="sos-source" name="Bash">vtools init VATDemo</textarea>
+  </div>
+</div>
 
-</div>
-</div>
 </div>
 
 <div class="output_wrapper">
@@ -12346,6 +12345,7 @@ INFO: Creating a new project VATDemo
 </div>
 </div>
 
+</div>
 </div>
 
 
@@ -12379,18 +12379,17 @@ INFO: Creating a new project VATDemo
 </div>
 </div>
 
+<div class="lan_Bash">
    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
-   
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-sos"><pre><span></span><span class="n">vtools</span> <span class="kn">import</span> <span class="o">*.</span><span class="n">vcf</span><span class="o">.</span><span class="n">gz</span> <span class="o">--</span><span class="n">var_info</span> <span class="n">DP</span> <span class="nb">filter</span> <span class="o">--</span><span class="n">geno_info</span> <span class="n">DP_geno</span> <span class="o">--</span><span class="n">build</span> <span class="n">hg18</span> <span class="o">-</span><span class="n">j1</span>
-</pre></div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div><div class="inner_cell" >
+  <div class="input_area cm-s-ipython" style="min-height: 2.31429em">
+   <textarea rows="1"
+      class="sos-source" name="Bash">vtools import *.vcf.gz --var_info DP filter --geno_info DP_geno --build hg18 -j1</textarea>
+  </div>
+</div>
 
-</div>
-</div>
 </div>
 
 <div class="output_wrapper">
@@ -12403,14 +12402,15 @@ INFO: Creating a new project VATDemo
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>INFO: Importing variants from CEU.exon.2010_03.genotypes.vcf.gz (1/2)
-CEU.exon.2010_03.genotypes.vcf.gz: 100% [============] 4,306 19.0K/s in 00:00:00
-INFO: 3,489 new variants (3,489 SNVs) from 3,500 lines are imported.
-Importing genotypes: 100% [===========================] 3,489 7.0K/s in 00:00:00
-INFO: Importing variants from YRI.exon.2010_03.genotypes.vcf.gz (2/2)
-YRI.exon.2010_03.genotypes.vcf.gz: 100% [============] 5,967 19.5K/s in 00:00:00
-INFO: 3,498 new variants (5,175 SNVs) from 5,186 lines are imported.
-Importing genotypes: 100% [==========================] 6,987 10.4K/s in 00:00:00
+<pre>INFO: Importing variants and genotypes from CEU.exon.2010_03.genotypes.vcf.gz (1/2)
+INFO: Creating 90 genotype tables
+CEU.exon.2010_03.genotypes.vcf.gz: 100% [============] 4,306 435.1/s in 00:00:09
+INFO: 3,489 variants (3,489 new, 3,489 SNVs) from 3,500 lines are imported, with a total of 288,291 genotypes from 90 samples.
+INFO: Importing variants and genotypes from YRI.exon.2010_03.genotypes.vcf.gz (2/2)
+INFO: Creating 112 genotype tables
+YRI.exon.2010_03.genotypes.vcf.gz: 100% [============] 5,967 441.3/s in 00:00:13
+INFO: 5,175 variants (3,498 new, 5,175 SNVs) from 5,186 lines are imported, with a total of 513,911 genotypes from 112 samples.
+INFO: 8,664 variants (6,987 new, 8,664 SNVs) from 8,686 lines are imported, with a total of 802,202 genotypes from 202 samples.
 </pre>
 </div>
 </div>
@@ -12418,6 +12418,7 @@ Importing genotypes: 100% [==========================] 6,987 10.4K/s in 00:00:00
 </div>
 </div>
 
+</div>
 </div>
 
 
@@ -12438,18 +12439,17 @@ Importing genotypes: 100% [==========================] 6,987 10.4K/s in 00:00:00
 </div>
 </div>
 
+<div class="lan_Bash">
    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
-   
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-sos"><pre><span></span><span class="n">vtools</span> <span class="n">liftover</span> <span class="n">hg19</span>
-</pre></div>
+<div class="prompt input_prompt">In&nbsp;[45]:</div><div class="inner_cell" >
+  <div class="input_area cm-s-ipython" style="min-height: 2.31429em">
+   <textarea rows="1"
+      class="sos-source" name="Bash">vtools liftover hg19 --flip</textarea>
+  </div>
+</div>
 
-</div>
-</div>
 </div>
 
 <div class="output_wrapper">
@@ -12464,9 +12464,10 @@ Importing genotypes: 100% [==========================] 6,987 10.4K/s in 00:00:00
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>INFO: Downloading liftOver chain file from UCSC
 INFO: Exporting variants in BED format
-Exporting variants: 100% [==========================] 6,987 200.9K/s in 00:00:00
+Exporting variants: 100% [==========================] 6,987 390.7K/s in 00:00:00
 INFO: Running UCSC liftOver tool
-Updating table variant: 100% [=======================] 6,987 989.6/s in 00:00:07
+INFO: Flipping primary and alternative reference genome
+Updating table variant: 100% [=========================] 6,987 7.6/s in 00:15:23
 </pre>
 </div>
 </div>
@@ -12474,6 +12475,7 @@ Updating table variant: 100% [=======================] 6,987 989.6/s in 00:00:07
 </div>
 </div>
 
+</div>
 </div>
 
 
@@ -12488,18 +12490,17 @@ Updating table variant: 100% [=======================] 6,987 989.6/s in 00:00:07
 </div>
 </div>
 
+<div class="lan_SoS">
    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
-   
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-sos"><pre><span></span><span class="n">head</span> <span class="n">phenotypes</span><span class="o">.</span><span class="n">csv</span>
-</pre></div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div><div class="inner_cell" >
+  <div class="input_area cm-s-ipython" style="min-height: 2.31429em">
+   <textarea rows="1"
+      class="sos-source" name="SoS">%preview phenotypes.csv -n -l 10</textarea>
+  </div>
+</div>
 
-</div>
-</div>
 </div>
 
 <div class="output_wrapper">
@@ -12511,10 +12512,11 @@ Updating table variant: 100% [=======================] 6,987 989.6/s in 00:00:07
 <div class="prompt"></div>
 
 
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>head: cannot open &#39;phenotypes.csv&#39; for reading: No such file or directory
-</pre>
+
+<div class="output_html rendered_html output_subarea ">
+<div class="sos_hint">> phenotypes.csv (5.0 KiB):</div>
 </div>
+
 </div>
 
 <div class="output_area">
@@ -12522,14 +12524,102 @@ Updating table variant: 100% [=======================] 6,987 989.6/s in 00:00:07
 <div class="prompt"></div>
 
 
-<div class="output_subarea output_text output_error">
-<pre></pre>
+
+<div class="output_html rendered_html output_subarea ">
+
+    <div class='dataframe_container' style="max-height:400px">
+    <input type="text" class='dataframe_input' id="search_2" onkeyup="filterDataFrame('2')" placeholder="Search for names..">
+    <table border="1" id="dataframe_2" class="sos_dataframe dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th> &nbsp; <i class="fa fa-sort" style="color:lightgray" onclick="sortDataFrame('2', 0, 'numeric')"></th>
+      <th>sample_name &nbsp; <i class="fa fa-sort" style="color:lightgray" onclick="sortDataFrame('2', 1, 'alphabetic')"></th>
+      <th>panel &nbsp; <i class="fa fa-sort" style="color:lightgray" onclick="sortDataFrame('2', 2, 'alphabetic')"></th>
+      <th>SEX &nbsp; <i class="fa fa-sort" style="color:lightgray" onclick="sortDataFrame('2', 3, 'numeric')"></th>
+      <th>BMI &nbsp; <i class="fa fa-sort" style="color:lightgray" onclick="sortDataFrame('2', 4, 'numeric')"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>NA06984</td>
+      <td>ILLUMINA</td>
+      <td>1</td>
+      <td>36.353</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>NA06985</td>
+      <td>NaN</td>
+      <td>2</td>
+      <td>21.415</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>NA06986</td>
+      <td>ABI_SOLID+ILLUMINA</td>
+      <td>1</td>
+      <td>26.898</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>NA06989</td>
+      <td>ILLUMINA</td>
+      <td>2</td>
+      <td>25.015</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>NA06994</td>
+      <td>ABI_SOLID+ILLUMINA</td>
+      <td>1</td>
+      <td>23.858</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>NA07000</td>
+      <td>ABI_SOLID+ILLUMINA</td>
+      <td>2</td>
+      <td>36.226</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>NA07037</td>
+      <td>ILLUMINA</td>
+      <td>1</td>
+      <td>32.513</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>NA07048</td>
+      <td>ILLUMINA</td>
+      <td>2</td>
+      <td>17.570</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>NA07051</td>
+      <td>ILLUMINA</td>
+      <td>1</td>
+      <td>37.142</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>NA07346</td>
+      <td>NaN</td>
+      <td>2</td>
+      <td>30.978</td>
+    </tr>
+  </tbody>
+</table></div>
 </div>
+
 </div>
 
 </div>
 </div>
 
+</div>
 </div>
 
 
@@ -12544,20 +12634,41 @@ Updating table variant: 100% [=======================] 6,987 989.6/s in 00:00:07
 </div>
 </div>
 
+<div class="lan_Bash">
    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-   
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-sos"><pre><span></span><span class="n">vtools</span> <span class="n">phenotype</span> <span class="o">--</span><span class="n">from_file</span> <span class="n">phenotypes</span><span class="o">.</span><span class="n">csv</span> <span class="o">--</span><span class="n">delimiter</span> <span class="s2">&quot;,&quot;</span>
-</pre></div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div><div class="inner_cell" >
+  <div class="input_area cm-s-ipython" style="min-height: 2.31429em">
+   <textarea rows="1"
+      class="sos-source" name="Bash">vtools phenotype --from_file phenotypes.csv --delimiter ","</textarea>
+  </div>
+</div>
+
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>INFO: Adding phenotype panel of type VARCHAR(24)
+INFO: Adding phenotype SEX of type INT
+INFO: Adding phenotype BMI of type FLOAT
+INFO: 3 field (3 new, 0 existing) phenotypes of 202 samples are updated.
+</pre>
+</div>
+</div>
 
 </div>
 </div>
-</div>
 
+</div>
 </div>
 
 
@@ -12585,18 +12696,17 @@ Updating table variant: 100% [=======================] 6,987 989.6/s in 00:00:07
 </div>
 </div>
 
+<div class="lan_Bash">
    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
-   
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-sos"><pre><span></span><span class="n">vtools</span> <span class="n">show</span> <span class="n">project</span>
-</pre></div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div><div class="inner_cell" >
+  <div class="input_area cm-s-ipython" style="min-height: 2.31429em">
+   <textarea rows="1"
+      class="sos-source" name="Bash">vtools show project</textarea>
+  </div>
+</div>
 
-</div>
-</div>
 </div>
 
 <div class="output_wrapper">
@@ -12610,10 +12720,9 @@ Updating table variant: 100% [=======================] 6,987 989.6/s in 00:00:07
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Project name:                VATDemo
-Created on:                  Fri Jun 29 07:55:30 2018
+Created on:                  Fri Jun 29 16:31:05 2018
 Primary reference genome:    hg18
 Secondary reference genome:  hg19
-Storage method:              hdf5
 Runtime options:             verbosity=1, shared_resource=/home/gaow/.variant_tools, local_resource=/home/gaow/.variant_tools
 Variant tables:              variant
 Annotation databases:        
@@ -12626,21 +12735,21 @@ Annotation databases:
 </div>
 
 </div>
+</div>
 
 
 
+<div class="lan_Bash">
    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
-   
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-sos"><pre><span></span><span class="n">vtools</span> <span class="n">show</span> <span class="n">tables</span>
-</pre></div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div><div class="inner_cell" >
+  <div class="input_area cm-s-ipython" style="min-height: 2.31429em">
+   <textarea rows="1"
+      class="sos-source" name="Bash">vtools show tables</textarea>
+  </div>
+</div>
 
-</div>
-</div>
 </div>
 
 <div class="output_wrapper">
@@ -12663,21 +12772,21 @@ variant        6,987    Jun29 Master variant table
 </div>
 
 </div>
+</div>
 
 
 
+<div class="lan_Bash">
    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
-   
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-sos"><pre><span></span><span class="n">vtools</span> <span class="n">show</span> <span class="n">table</span> <span class="n">variant</span>
-</pre></div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div><div class="inner_cell" >
+  <div class="input_area cm-s-ipython" style="min-height: 2.31429em">
+   <textarea rows="1"
+      class="sos-source" name="Bash">vtools show table variant</textarea>
+  </div>
+</div>
 
-</div>
-</div>
 </div>
 
 <div class="output_wrapper">
@@ -12705,21 +12814,21 @@ Number of variants:     6987
 </div>
 
 </div>
+</div>
 
 
 
+<div class="lan_Bash">
    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
-   
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-sos"><pre><span></span><span class="n">vtools</span> <span class="n">show</span> <span class="n">fields</span>
-</pre></div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div><div class="inner_cell" >
+  <div class="input_area cm-s-ipython" style="min-height: 2.31429em">
+   <textarea rows="1"
+      class="sos-source" name="Bash">vtools show fields</textarea>
+  </div>
+</div>
 
-</div>
-</div>
 </div>
 
 <div class="output_wrapper">
@@ -12750,6 +12859,7 @@ variant.alt_pos (int)
 </div>
 
 </div>
+</div>
 
 
   
@@ -12763,18 +12873,17 @@ variant.alt_pos (int)
 </div>
 </div>
 
+<div class="lan_Bash">
    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[22]:</div>
-   
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-sos"><pre><span></span><span class="n">vtools</span> <span class="n">select</span> <span class="n">variant</span> <span class="o">--</span><span class="n">count</span>
-</pre></div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div><div class="inner_cell" >
+  <div class="input_area cm-s-ipython" style="min-height: 2.31429em">
+   <textarea rows="1"
+      class="sos-source" name="Bash">vtools select variant --count</textarea>
+  </div>
+</div>
 
-</div>
-</div>
 </div>
 
 <div class="output_wrapper">
@@ -12787,7 +12896,7 @@ variant.alt_pos (int)
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Counting variants: 4 405.3/s in 00:00:00
+<pre>Counting variants: 4 796.0/s in 00:00:00                                        
 6987
 </pre>
 </div>
@@ -12796,6 +12905,7 @@ variant.alt_pos (int)
 </div>
 </div>
 
+</div>
 </div>
 
 
@@ -12846,20 +12956,20 @@ variant.alt_pos (int)
 </div>
 </div>
 
+<div class="lan_Bash">
    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[23]:</div>
-   
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-sos"><pre><span></span><span class="n">vtools</span> <span class="n">show</span> <span class="n">genotypes</span> <span class="o">&gt;</span> <span class="n">genotype_summary</span><span class="o">.</span><span class="n">txt</span>
-</pre></div>
-
-</div>
-</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div><div class="inner_cell" >
+  <div class="input_area cm-s-ipython" style="min-height: 2.31429em">
+   <textarea rows="1"
+      class="sos-source" name="Bash">vtools show genotypes > genotype_summary.txt</textarea>
+  </div>
 </div>
 
+</div>
+
+</div>
 </div>
 
 
@@ -12868,10 +12978,10 @@ variant.alt_pos (int)
    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[25]:</div><div class="inner_cell" >
+<div class="prompt input_prompt">In&nbsp;[18]:</div><div class="inner_cell" >
   <div class="input_area cm-s-ipython" style="min-height: 2.31429em">
    <textarea rows="1"
-      class="sos-source" name="SoS">%preview genotype_summary.txt</textarea>
+      class="sos-source" name="SoS">%preview genotype_summary.txt -n -l 10</textarea>
   </div>
 </div>
 
@@ -12888,7 +12998,7 @@ variant.alt_pos (int)
 
 
 <div class="output_html rendered_html output_subarea ">
-<div class="sos_hint">> genotype_summary.txt (11.5 KiB):</div>
+<div class="sos_hint">> genotype_summary.txt (12.5 KiB):</div>
 </div>
 
 </div>
@@ -12900,10 +13010,15 @@ variant.alt_pos (int)
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>sample_name	filename                 	num_genotypes	sample_genotype_fields
-NA06984    	CEU.exon...notypes.vcf.gz	3162         	DP,GT
-NA06985    	CEU.exon...notypes.vcf.gz	3144         	DP,GT
-NA06986    	CEU.exon...notypes.vcf.gz	3437         	DP,GT
-NA06989    	CEU.exon...notypes.vcf.gz	3130         	DP,GT
+NA06984    	CEU.exon...notypes.vcf.gz	3162         	GT,DP_geno
+NA06985    	CEU.exon...notypes.vcf.gz	3144         	GT,DP_geno
+NA06986    	CEU.exon...notypes.vcf.gz	3437         	GT,DP_geno
+NA06989    	CEU.exon...notypes.vcf.gz	3130         	GT,DP_geno
+NA06994    	CEU.exon...notypes.vcf.gz	3002         	GT,DP_geno
+NA07000    	CEU.exon...notypes.vcf.gz	3388         	GT,DP_geno
+NA07037    	CEU.exon...notypes.vcf.gz	3374         	GT,DP_geno
+NA07048    	CEU.exon...notypes.vcf.gz	3373         	GT,DP_geno
+NA07051    	CEU.exon...notypes.vcf.gz	3451         	GT,DP_geno
 </pre>
 </div>
 </div>
@@ -12925,6 +13040,3071 @@ NA06989    	CEU.exon...notypes.vcf.gz	3130         	DP,GT
 </div>
 </div>
 </div>
+
+<div class="lan_Bash">
+   
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[19]:</div><div class="inner_cell" >
+  <div class="input_area cm-s-ipython" style="min-height: 2.31429em">
+   <textarea rows="1"
+      class="sos-source" name="Bash">vtools output variant "max(DP)" "min(DP)" "avg(DP)" "stdev(DP)" "lower_quartile(DP)" "upper_quartile(DP)" --header</textarea>
+  </div>
+</div>
+
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>max_DP_	min_DP_	avg_DP_           	stdev_DP_         	lower_quartile_DP_	upper_quartile_DP_
+25490  	13     	6815.7702876771145	3434.2804009099777	4301              	9143
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+</div>
+
+
+
+<div class="lan_Bash">
+   
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[21]:</div><div class="inner_cell" >
+  <div class="input_area cm-s-ipython" style="min-height: 2.31429em">
+   <textarea rows="1"
+      class="sos-source" name="Bash">vtools select variant "filter='PASS'" --count</textarea>
+  </div>
+</div>
+
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Counting variants: 5 882.4/s in 00:00:00                                        
+6987
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+</div>
+
+
+
+<div class="lan_Bash">
+   
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[23]:</div><div class="inner_cell" >
+  <div class="input_area cm-s-ipython" style="min-height: 2.31429em">
+   <textarea rows="1"
+      class="sos-source" name="Bash">vtools select variant "filter='PASS'" -o "max(DP)" "min(DP)" "avg(DP)" "stdev(DP)" "lower_quartile(DP)" "upper_quartile(DP)" --header</textarea>
+  </div>
+</div>
+
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>max_DP_	min_DP_	avg_DP_           	stdev_DP_         	lower_quartile_DP_	upper_quartile_DP_
+25490  	13     	6815.7702876771145	3434.2804009099777	4301              	9143
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+</div>
+
+
+
+<div class="lan_Bash">
+   
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[24]:</div><div class="inner_cell" >
+  <div class="input_area cm-s-ipython" style="min-height: 2.31429em">
+   <textarea rows="1"
+      class="sos-source" name="Bash">vtools update variant --from_stat 'total=#(GT)' 'num=#(alt)' 'het=#(het)' 'hom=#(hom)' 'other=#(other)' 'minDP=min(DP_geno)' 'maxDP=max(DP_geno)' 'meanDP=avg(DP_geno)' 'maf=maf()'</textarea>
+  </div>
+</div>
+
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Counting variants: 100% [==============================] 202 102.8/s in 00:00:01
+INFO: Adding variant info field num with type INT
+INFO: Adding variant info field hom with type INT
+INFO: Adding variant info field het with type INT
+INFO: Adding variant info field other with type INT
+INFO: Adding variant info field total with type INT
+INFO: Adding variant info field maf with type FLOAT
+INFO: Adding variant info field minDP with type INT
+INFO: Adding variant info field maxDP with type INT
+INFO: Adding variant info field meanDP with type FLOAT
+Updating variant: 100% [=============================] 6,987 42.3K/s in 00:00:00
+INFO: 6987 records are updated
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+</div>
+
+
+
+<div class="lan_Bash">
+   
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[25]:</div><div class="inner_cell" >
+  <div class="input_area cm-s-ipython" style="min-height: 2.31429em">
+   <textarea rows="1"
+      class="sos-source" name="Bash">vtools show fields</textarea>
+  </div>
+</div>
+
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>variant.chr (char)      Chromosome name (VARCHAR)
+variant.pos (int)       Position (INT, 1-based)
+variant.ref (char)      Reference allele (VARCHAR, - for missing allele of an
+                        insertion)
+variant.alt (char)      Alternative allele (VARCHAR, - for missing allele of an
+                        deletion)
+variant.DP (int)
+variant.filter (char)
+variant.alt_chr (char)
+variant.alt_pos (int)
+variant.num (int)       Created from stat &#34;#(alt)&#34;  with type INT on Jun29
+variant.hom (int)       Created from stat &#34;#(hom)&#34;  with type INT on Jun29
+variant.het (int)       Created from stat &#34;#(het)&#34;  with type INT on Jun29
+variant.other (int)     Created from stat &#34;#(other)&#34;  with type INT on Jun29
+variant.total (int)     Created from stat &#34;#(GT)&#34;  with type INT on Jun29
+variant.maf (float)     Created from stat &#34;maf()&#34;  with type FLOAT on Jun29
+variant.minDP (int)     Created from stat &#34;min(DP_geno)&#34;  with type INT on Jun29
+variant.maxDP (int)     Created from stat &#34;max(DP_geno)&#34;  with type INT on Jun29
+variant.meanDP (float)  Created from stat &#34;avg(DP_geno)&#34;  with type FLOAT on
+                        Jun29
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+</div>
+
+
+
+<div class="lan_Bash">
+   
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[26]:</div><div class="inner_cell" >
+  <div class="input_area cm-s-ipython" style="min-height: 2.31429em">
+   <textarea rows="1"
+      class="sos-source" name="Bash">vtools show table variant</textarea>
+  </div>
+</div>
+
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Name:                   variant
+Description:            Master variant table
+Creation date:          Jun29
+Command:
+Fields:                 variant_id, bin, chr, pos, ref, alt, DP, filter,
+                        alt_bin, alt_chr, alt_pos, num, hom, het, other, total,
+                        maf, minDP, maxDP, meanDP
+Number of variants:     6987
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+</div>
+
+
+
+<div class="lan_Bash">
+   
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[28]:</div><div class="inner_cell" >
+  <div class="input_area cm-s-ipython" style="min-height: 2.31429em">
+   <textarea rows="1"
+      class="sos-source" name="Bash">vtools update variant --from_stat 'totalGD10=#(GT)' 'numGD10=#(alt)' 'hetGD10=#(het)' 'homGD10=#(hom)' 'otherGD10=#(other)' 'mafGD10=maf()' --genotypes "DP_geno > 10"</textarea>
+  </div>
+</div>
+
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Counting variants: 100% [==============================] 202 333.8/s in 00:00:00
+INFO: Adding variant info field numGD10 with type INT
+INFO: Adding variant info field homGD10 with type INT
+INFO: Adding variant info field hetGD10 with type INT
+INFO: Adding variant info field otherGD10 with type INT
+INFO: Adding variant info field totalGD10 with type INT
+INFO: Adding variant info field mafGD10 with type FLOAT
+Updating variant: 100% [=============================] 6,976 42.1K/s in 00:00:00
+INFO: 6976 records are updated
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+</div>
+
+
+
+<div class="lan_Bash">
+   
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[29]:</div><div class="inner_cell" >
+  <div class="input_area cm-s-ipython" style="min-height: 2.31429em">
+   <textarea rows="1"
+      class="sos-source" name="Bash">vtools show fields</textarea>
+  </div>
+</div>
+
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>variant.chr (char)      Chromosome name (VARCHAR)
+variant.pos (int)       Position (INT, 1-based)
+variant.ref (char)      Reference allele (VARCHAR, - for missing allele of an
+                        insertion)
+variant.alt (char)      Alternative allele (VARCHAR, - for missing allele of an
+                        deletion)
+variant.DP (int)
+variant.filter (char)
+variant.alt_chr (char)
+variant.alt_pos (int)
+variant.num (int)       Created from stat &#34;#(alt)&#34;  with type INT on Jun29
+variant.hom (int)       Created from stat &#34;#(hom)&#34;  with type INT on Jun29
+variant.het (int)       Created from stat &#34;#(het)&#34;  with type INT on Jun29
+variant.other (int)     Created from stat &#34;#(other)&#34;  with type INT on Jun29
+variant.total (int)     Created from stat &#34;#(GT)&#34;  with type INT on Jun29
+variant.maf (float)     Created from stat &#34;maf()&#34;  with type FLOAT on Jun29
+variant.minDP (int)     Created from stat &#34;min(DP_geno)&#34;  with type INT on Jun29
+variant.maxDP (int)     Created from stat &#34;max(DP_geno)&#34;  with type INT on Jun29
+variant.meanDP (float)  Created from stat &#34;avg(DP_geno)&#34;  with type FLOAT on
+                        Jun29
+variant.numGD10 (int)   Created from stat &#34;#(alt)&#34;  with type INT on Jun29
+variant.homGD10 (int)   Created from stat &#34;#(hom)&#34;  with type INT on Jun29
+variant.hetGD10 (int)   Created from stat &#34;#(het)&#34;  with type INT on Jun29
+variant.otherGD10 (int) 
+                        Created from stat &#34;#(other)&#34;  with type INT on Jun29
+variant.totalGD10 (int) 
+                        Created from stat &#34;#(GT)&#34;  with type INT on Jun29
+variant.mafGD10 (float) 
+                        Created from stat &#34;maf()&#34;  with type FLOAT on Jun29
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+</div>
+
+
+
+<div class="lan_Bash">
+   
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[30]:</div><div class="inner_cell" >
+  <div class="input_area cm-s-ipython" style="min-height: 2.31429em">
+   <textarea rows="1"
+      class="sos-source" name="Bash">vtools show table variant</textarea>
+  </div>
+</div>
+
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Name:                   variant
+Description:            Master variant table
+Creation date:          Jun29
+Command:
+Fields:                 variant_id, bin, chr, pos, ref, alt, DP, filter,
+                        alt_bin, alt_chr, alt_pos, num, hom, het, other, total,
+                        maf, minDP, maxDP, meanDP, numGD10, homGD10, hetGD10,
+                        otherGD10, totalGD10, mafGD10
+Number of variants:     6987
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+</div>
+
+
+
+<div class="lan_Bash">
+   
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[31]:</div><div class="inner_cell" >
+  <div class="input_area cm-s-ipython" style="min-height: 2.31429em">
+   <textarea rows="1"
+      class="sos-source" name="Bash">vtools output variant chr pos maf mafGD10 --header --limit 20</textarea>
+  </div>
+</div>
+
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>chr	pos     	maf                  	mafGD10
+1  	1105366 	0.03508771929824561  	0.05128205128205128
+1  	1105411 	0.009433962264150943 	0.01282051282051282
+1  	1108138 	0.19230769230769232  	0.18023255813953487
+1  	1110240 	0.0056179775280898875	0.0
+1  	1110294 	0.228125             	0.2423076923076923
+1  	3537996 	0.12012987012987009  	0.15217391304347827
+1  	3538692 	0.041025641025641026 	0.043209876543209874
+1  	3541597 	0.0056179775280898875	0.006172839506172839
+1  	3541652 	0.044444444444444446 	0.05333333333333334
+1  	3545211 	0.0056179775280898875	0.005813953488372093
+1  	6447088 	0.13114754098360656  	0.14
+1  	6447275 	0.05113636363636364  	0.056451612903225805
+1  	6447290 	0.011494252873563218 	0.015625
+1  	7760783 	0.0056179775280898875	0.006578947368421052
+1  	10424956	0.005747126436781609 	0.006756756756756757
+1  	11633148	0.1111111111111111   	0.10344827586206896
+1  	17786644	0.0755813953488372   	0.0859375
+1  	17786709	0.08235294117647059  	0.08064516129032258
+1  	17801259	0.00684931506849315  	0.011363636363636364
+1  	17822149	0.006172839506172839 	0.009615384615384616
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+</div>
+
+
+
+<div class="lan_Bash">
+   
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[34]:</div><div class="inner_cell" >
+  <div class="input_area cm-s-ipython" style="min-height: 2.31429em">
+   <textarea rows="1"
+      class="sos-source" name="Bash">vtools phenotype --set "RACE=0" --samples "filename like 'YRI%'"</textarea>
+  </div>
+</div>
+
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>INFO: 112 values of 1 phenotypes (0 new, 1 existing) of 112 samples are updated.
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+</div>
+
+
+
+<div class="lan_Bash">
+   
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[33]:</div><div class="inner_cell" >
+  <div class="input_area cm-s-ipython" style="min-height: 2.31429em">
+   <textarea rows="1"
+      class="sos-source" name="Bash">vtools phenotype --set "RACE=1" --samples "filename like 'CEU%'"</textarea>
+  </div>
+</div>
+
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>INFO: 90 values of 1 phenotypes (0 new, 1 existing) of 90 samples are updated.
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+</div>
+
+
+
+<div class="lan_Bash">
+   
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[35]:</div><div class="inner_cell" >
+  <div class="input_area cm-s-ipython" style="min-height: 2.31429em">
+   <textarea rows="1"
+      class="sos-source" name="Bash">vtools show samples --limit 10</textarea>
+  </div>
+</div>
+
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>sample_name	filename                 	panel             	SEX	BMI   	RACE
+NA06984    	CEU.exon...notypes.vcf.gz	ILLUMINA          	1  	36.353	1
+NA06985    	CEU.exon...notypes.vcf.gz	.                 	2  	21.415	1
+NA06986    	CEU.exon...notypes.vcf.gz	ABI_SOLID+ILLUMINA	1  	26.898	1
+NA06989    	CEU.exon...notypes.vcf.gz	ILLUMINA          	2  	25.015	1
+NA06994    	CEU.exon...notypes.vcf.gz	ABI_SOLID+ILLUMINA	1  	23.858	1
+NA07000    	CEU.exon...notypes.vcf.gz	ABI_SOLID+ILLUMINA	2  	36.226	1
+NA07037    	CEU.exon...notypes.vcf.gz	ILLUMINA          	1  	32.513	1
+NA07048    	CEU.exon...notypes.vcf.gz	ILLUMINA          	2  	17.57 	1
+NA07051    	CEU.exon...notypes.vcf.gz	ILLUMINA          	1  	37.142	1
+NA07346    	CEU.exon...notypes.vcf.gz	.                 	2  	30.978	1
+(192 records omitted)
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+</div>
+
+
+
+<div class="lan_Bash">
+   
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[36]:</div><div class="inner_cell" >
+  <div class="input_area cm-s-ipython" style="min-height: 2.31429em">
+   <textarea rows="1"
+      class="sos-source" name="Bash">vtools update variant --from_stat 'CEU_mafGD10=maf()' --genotypes 'DP_geno>10' --samples "RACE=1"</textarea>
+  </div>
+</div>
+
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>INFO: 90 samples are selected
+Counting variants: 100% [===============================] 90 397.8/s in 00:00:00
+INFO: Adding variant info field CEU_mafGD10 with type FLOAT
+Updating variant: 100% [=============================] 3,483 26.5K/s in 00:00:00
+INFO: 3483 records are updated
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+</div>
+
+
+
+<div class="lan_Bash">
+   
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[37]:</div><div class="inner_cell" >
+  <div class="input_area cm-s-ipython" style="min-height: 2.31429em">
+   <textarea rows="1"
+      class="sos-source" name="Bash">vtools update variant --from_stat 'YRI_mafGD10=maf()' --genotypes 'DP_geno>10' --samples "RACE=0"</textarea>
+  </div>
+</div>
+
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>INFO: 112 samples are selected
+Counting variants: 100% [==============================] 112 282.0/s in 00:00:00
+INFO: Adding variant info field YRI_mafGD10 with type FLOAT
+Updating variant: 100% [=============================] 5,167 36.4K/s in 00:00:00
+INFO: 5167 records are updated
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+</div>
+
+
+
+<div class="lan_Bash">
+   
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[38]:</div><div class="inner_cell" >
+  <div class="input_area cm-s-ipython" style="min-height: 2.31429em">
+   <textarea rows="1"
+      class="sos-source" name="Bash">vtools output variant chr pos mafGD10 CEU_mafGD10 YRI_mafGD10 --header --limit 10</textarea>
+  </div>
+</div>
+
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>chr	pos    	mafGD10             	CEU_mafGD10         	YRI_mafGD10
+1  	1105366	0.05128205128205128 	0.05128205128205128 	0.0
+1  	1105411	0.01282051282051282 	0.01282051282051282 	0.0
+1  	1108138	0.18023255813953487 	0.02127659574468085 	0.3717948717948718
+1  	1110240	0.0                 	0.0                 	0.0
+1  	1110294	0.2423076923076923  	0.025               	0.42857142857142855
+1  	3537996	0.15217391304347827 	0.17045454545454541 	0.13541666666666663
+1  	3538692	0.043209876543209874	0.08333333333333333 	0.005952380952380952
+1  	3541597	0.006172839506172839	0.006172839506172839	0.0
+1  	3541652	0.05333333333333334 	0.05333333333333334 	0.0
+1  	3545211	0.005813953488372093	0.005813953488372093	0.0
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+</div>
+
+
+
+<div class="lan_Bash">
+   
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[39]:</div><div class="inner_cell" >
+  <div class="input_area cm-s-ipython" style="min-height: 2.31429em">
+   <textarea rows="1"
+      class="sos-source" name="Bash">vtools phenotype --from_stat 'CEU_totalGD10=#(GT)' 'CEU_numGD10=#(alt)' --genotypes 'DP_geno>10' --samples "RACE=1"</textarea>
+  </div>
+</div>
+
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Calculating phenotype: 100% [============================] 90 89.9/s in 00:00:01
+INFO: 180 values of 2 phenotypes (2 new, 0 existing) of 90 samples are updated.
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+</div>
+
+
+
+<div class="lan_Bash">
+   
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[40]:</div><div class="inner_cell" >
+  <div class="input_area cm-s-ipython" style="min-height: 2.31429em">
+   <textarea rows="1"
+      class="sos-source" name="Bash">vtools phenotype --from_stat 'YRI_totalGD10=#(GT)' 'YRI_numGD10=#(alt)' --genotypes 'DP_geno>10' --samples "RACE=0"</textarea>
+  </div>
+</div>
+
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Calculating phenotype: 100% [==========================] 112 111.8/s in 00:00:01
+INFO: 224 values of 2 phenotypes (2 new, 0 existing) of 112 samples are updated.
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+</div>
+
+
+
+<div class="lan_Bash">
+   
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[42]:</div><div class="inner_cell" >
+  <div class="input_area cm-s-ipython" style="min-height: 2.31429em">
+   <textarea rows="1"
+      class="sos-source" name="Bash">vtools phenotype --output sample_name CEU_totalGD10 CEU_numGD10 YRI_totalGD10 YRI_numGD10 --header</textarea>
+  </div>
+</div>
+
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>sample_name	CEU_totalGD10	CEU_numGD10	YRI_totalGD10	YRI_numGD10
+NA06984	2774	849	NA	NA
+NA06985	1944	570	NA	NA
+NA06986	3386	1029	NA	NA
+NA06989	2659	819	NA	NA
+NA06994	1730	486	NA	NA
+NA07000	3089	979	NA	NA
+NA07037	2990	931	NA	NA
+NA07048	3305	1012	NA	NA
+NA07051	3402	1130	NA	NA
+NA07346	3356	1092	NA	NA
+NA07347	3330	1121	NA	NA
+NA07357	3373	1063	NA	NA
+NA10847	2371	791	NA	NA
+NA10851	2408	665	NA	NA
+NA11829	3365	1087	NA	NA
+NA11830	2935	939	NA	NA
+NA11831	3379	1069	NA	NA
+NA11832	3398	1149	NA	NA
+NA11840	1886	615	NA	NA
+NA11843	2400	790	NA	NA
+NA11881	2273	698	NA	NA
+NA11893	2951	921	NA	NA
+NA11918	3297	1044	NA	NA
+NA11919	2855	753	NA	NA
+NA11920	3365	1129	NA	NA
+NA11930	3336	1128	NA	NA
+NA11992	3386	1111	NA	NA
+NA11994	3370	1095	NA	NA
+NA11995	1993	622	NA	NA
+NA12003	3328	1062	NA	NA
+NA12004	1613	449	NA	NA
+NA12005	2973	923	NA	NA
+NA12006	1656	484	NA	NA
+NA12043	3323	1089	NA	NA
+NA12044	2602	791	NA	NA
+NA12045	3385	1052	NA	NA
+NA12058	2664	837	NA	NA
+NA12144	3316	993	NA	NA
+NA12154	3114	1028	NA	NA
+NA12155	3354	1126	NA	NA
+NA12156	1390	380	NA	NA
+NA12234	3333	1060	NA	NA
+NA12249	2081	638	NA	NA
+NA12272	2371	756	NA	NA
+NA12273	2319	737	NA	NA
+NA12275	2251	725	NA	NA
+NA12282	1758	529	NA	NA
+NA12283	2459	770	NA	NA
+NA12286	2528	785	NA	NA
+NA12287	3231	1059	NA	NA
+NA12340	2648	820	NA	NA
+NA12341	2266	634	NA	NA
+NA12342	2666	825	NA	NA
+NA12347	3056	927	NA	NA
+NA12348	2751	794	NA	NA
+NA12383	3356	1082	NA	NA
+NA12400	2169	679	NA	NA
+NA12413	3387	1095	NA	NA
+NA12414	2709	800	NA	NA
+NA12489	2888	870	NA	NA
+NA12546	3389	1125	NA	NA
+NA12716	2617	829	NA	NA
+NA12717	2280	724	NA	NA
+NA12718	2310	715	NA	NA
+NA12748	3302	978	NA	NA
+NA12749	3103	935	NA	NA
+NA12750	2210	712	NA	NA
+NA12751	2202	692	NA	NA
+NA12760	2868	890	NA	NA
+NA12761	1675	525	NA	NA
+NA12762	3184	1026	NA	NA
+NA12763	1634	526	NA	NA
+NA12775	3228	960	NA	NA
+NA12776	3186	1050	NA	NA
+NA12812	2244	693	NA	NA
+NA12814	2959	940	NA	NA
+NA12815	1589	475	NA	NA
+NA12828	3274	1051	NA	NA
+NA12829	3227	1019	NA	NA
+NA12830	3058	914	NA	NA
+NA12842	1684	502	NA	NA
+NA12843	2832	846	NA	NA
+NA12872	1485	425	NA	NA
+NA12873	1329	357	NA	NA
+NA12874	1802	521	NA	NA
+NA12878	3463	1125	NA	NA
+NA12889	360	103	NA	NA
+NA12890	3394	1089	NA	NA
+NA12891	3435	1107	NA	NA
+NA12892	3426	1055	NA	NA
+NA18486	NA	NA	4718	1180
+NA18488	NA	NA	4591	1150
+NA18489	NA	NA	3350	685
+NA18498	NA	NA	4058	926
+NA18499	NA	NA	3408	642
+NA18501	NA	NA	4267	1005
+NA18504	NA	NA	38	7
+NA18508	NA	NA	4036	912
+NA18516	NA	NA	86	13
+NA18519	NA	NA	4820	1163
+NA18520	NA	NA	4886	1176
+NA18522	NA	NA	27	3
+NA18523	NA	NA	5027	1299
+NA18853	NA	NA	4645	1169
+NA18856	NA	NA	4958	1282
+NA18858	NA	NA	5000	1323
+NA18861	NA	NA	4525	1089
+NA18865	NA	NA	1294	279
+NA18867	NA	NA	4849	1211
+NA18868	NA	NA	4430	1079
+NA18870	NA	NA	42	5
+NA18871	NA	NA	52	10
+NA18877	NA	NA	4866	1236
+NA18881	NA	NA	4484	1062
+NA18907	NA	NA	3826	871
+NA18909	NA	NA	3551	767
+NA18910	NA	NA	4836	1216
+NA18915	NA	NA	4394	1025
+NA18916	NA	NA	4378	1009
+NA18917	NA	NA	2835	688
+NA18923	NA	NA	3042	697
+NA18924	NA	NA	3086	697
+NA18933	NA	NA	2772	654
+NA18934	NA	NA	3079	704
+NA19092	NA	NA	4762	1234
+NA19095	NA	NA	4012	963
+NA19096	NA	NA	4072	912
+NA19098	NA	NA	2843	648
+NA19102	NA	NA	1908	303
+NA19105	NA	NA	4150	953
+NA19108	NA	NA	5043	1214
+NA19113	NA	NA	4049	987
+NA19116	NA	NA	3590	721
+NA19117	NA	NA	4092	978
+NA19118	NA	NA	4189	998
+NA19119	NA	NA	2866	665
+NA19121	NA	NA	4364	1061
+NA19122	NA	NA	4024	978
+NA19130	NA	NA	4570	1153
+NA19131	NA	NA	2827	694
+NA19133	NA	NA	4688	1146
+NA19135	NA	NA	4575	1158
+NA19137	NA	NA	1695	381
+NA19138	NA	NA	2897	697
+NA19141	NA	NA	2615	584
+NA19143	NA	NA	3260	772
+NA19146	NA	NA	3934	965
+NA19149	NA	NA	4187	967
+NA19150	NA	NA	4064	940
+NA19152	NA	NA	3238	715
+NA19153	NA	NA	3279	795
+NA19156	NA	NA	4516	1127
+NA19157	NA	NA	4773	1166
+NA19159	NA	NA	3122	744
+NA19163	NA	NA	4371	1069
+NA19166	NA	NA	4845	1220
+NA19168	NA	NA	4479	1114
+NA19171	NA	NA	3168	747
+NA19172	NA	NA	4161	949
+NA19175	NA	NA	4167	986
+NA19179	NA	NA	3969	970
+NA19181	NA	NA	2911	696
+NA19182	NA	NA	4116	991
+NA19184	NA	NA	4140	1004
+NA19185	NA	NA	4315	1017
+NA19187	NA	NA	4222	995
+NA19189	NA	NA	5019	1279
+NA19190	NA	NA	4603	1034
+NA19195	NA	NA	4450	1093
+NA19196	NA	NA	4450	1082
+NA19197	NA	NA	3433	875
+NA19198	NA	NA	3196	749
+NA19200	NA	NA	2990	710
+NA19201	NA	NA	2519	592
+NA19204	NA	NA	3114	714
+NA19206	NA	NA	3056	765
+NA19207	NA	NA	2280	525
+NA19209	NA	NA	2962	673
+NA19210	NA	NA	1350	273
+NA19213	NA	NA	4910	1206
+NA19214	NA	NA	4214	1020
+NA19216	NA	NA	4439	1098
+NA19217	NA	NA	4230	1025
+NA19220	NA	NA	2690	611
+NA19222	NA	NA	5053	1261
+NA19223	NA	NA	2720	628
+NA19225	NA	NA	5047	1304
+NA19229	NA	NA	4813	1228
+NA19235	NA	NA	4466	1074
+NA19236	NA	NA	4668	1174
+NA19238	NA	NA	5027	1271
+NA19239	NA	NA	5147	1379
+NA19240	NA	NA	5145	1361
+NA19247	NA	NA	4606	1108
+NA19248	NA	NA	4698	1146
+NA19250	NA	NA	4218	1025
+NA19253	NA	NA	4964	1248
+NA19257	NA	NA	4969	1229
+NA19259	NA	NA	4182	1005
+NA19260	NA	NA	4404	1076
+NA19262	NA	NA	4308	1044
+NA19266	NA	NA	4878	1211
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+</div>
+
+
+
+<div class="lan_Bash">
+   
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[47]:</div><div class="inner_cell" >
+  <div class="input_area cm-s-ipython" style="min-height: 3.5285800000000003em">
+   <textarea rows="2"
+      class="sos-source" name="Bash">export PATH=/home/gaow/tmp/29-Jun-2018/annovar:$PATH
+vtools execute ANNOVAR geneanno</textarea>
+  </div>
+</div>
+
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>INFO: Executing <span class="ansi-green-fg">ANNOVAR.geneanno_0</span>: Load specified snapshot if a snapshot is specified. Otherwise use the existing project.
+INFO: Executing <span class="ansi-green-fg">ANNOVAR.geneanno_10</span>: Check the existence of ANNOVAR&#39;s annotate_variation.pl command.
+INFO: Command annotate_variation.pl is located.
+INFO: Executing <span class="ansi-green-fg">ANNOVAR.geneanno_11</span>: Determine the humandb path of ANNOVAR
+<span class="ansi-magenta-intense-fg">WARNING</span>: <span class="ansi-magenta-intense-fg">Size of existing file differ from recorded file: VATDemo.proj</span>
+INFO: Running <span class="ansi-green-fg">which annotate_variation.pl &gt; /home/gaow/Documents/GIT/wiki/ismb-2018/data/.vtools_cache/annovar.path</span>
+INFO: Pipeline variable <span class="ansi-green-fg">HUMANDB</span> is set to <span class="ansi-green-fg">/home/gaow/tmp/29-Jun-2018/annovar/humandb</span>
+INFO: Executing <span class="ansi-green-fg">ANNOVAR.geneanno_14</span>: Download gene database for specified --dbtype if they are unavailable
+INFO: Running <span class="ansi-green-fg">annotate_variation.pl --buildver hg19 -downdb refGene /home/gaow/tmp/29-Jun-2018/annovar/humandb</span>
+INFO: Executing <span class="ansi-green-fg">ANNOVAR.geneanno_20</span>: Export variants in ANNOVAR format
+INFO: Running <span class="ansi-green-fg">vtools export variant --format ANNOVAR --output /home/gaow/Documents/GIT/wiki/ismb-2018/data/.vtools_cache/annovar_input</span>
+INFO: Executing <span class="ansi-green-fg">ANNOVAR.geneanno_30</span>: Execute ANNOVAR annotate_variation.pl --geneanno
+INFO: Running <span class="ansi-green-fg">annotate_variation.pl --geneanno --dbtype refGene --buildver hg19 /home/gaow/Documents/GIT/wiki/ismb-2018/data/.vtools_cache/annovar_input /home/gaow/tmp/29-Jun-2018/annovar/humandb</span>
+INFO: Executing <span class="ansi-green-fg">ANNOVAR.geneanno_40</span>: Importing results from ANNOVAR output .variant_function if --variant_info is specified
+INFO: Running <span class="ansi-green-fg">vtools update variant --from_file /home/gaow/Documents/GIT/wiki/ismb-2018/data/.vtools_cache/annovar_input.variant_function --format ANNOVAR_variant_function --var_info region_type, region_name</span>
+INFO: Using primary reference genome hg19 of the project.
+Getting existing variants: 100% [===================] 6,987 626.2K/s in 00:00:00
+INFO: Updating variants from /home/gaow/Documents/GIT/wiki/ismb-2018/data/.vtools_cache/annovar_input.variant_function (1/1)
+annovar_input.variant_function: 100% [===============] 6,987 530.5/s in 00:00:13
+INFO: Fields region_type, region_name of 6,987 variants are updated
+INFO: Executing <span class="ansi-green-fg">ANNOVAR.geneanno_50</span>: Importing results from ANNOVAR output .exonic_variant_function if --exonic_info is specified
+INFO: Running <span class="ansi-green-fg">vtools update variant --from_file /home/gaow/Documents/GIT/wiki/ismb-2018/data/.vtools_cache/annovar_input.exonic_variant_function --format ANNOVAR_exonic_variant_function --var_info mut_type, function</span>
+INFO: Using primary reference genome hg19 of the project.
+Getting existing variants: 100% [===================] 6,987 605.6K/s in 00:00:00
+INFO: Updating variants from /home/gaow/Documents/GIT/wiki/ismb-2018/data/.vtools_cache/annovar_input.exonic_variant_function (1/1)
+annovar_input.exonic_variant_function: 100% [========] 6,928 720.6/s in 00:00:09
+INFO: Fields mut_type, function of 6,928 variants are updated
+INFO: Execution of pipeline ANNOVAR.geneanno is successful with output /home/gaow/Documents/GIT/wiki/ismb-2018/data/.vtools_cache/annovar_input.exonic_variant_function
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+</div>
+
+
+
+<div class="lan_Bash">
+   
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[49]:</div><div class="inner_cell" >
+  <div class="input_area cm-s-ipython" style="min-height: 2.31429em">
+   <textarea rows="1"
+      class="sos-source" name="Bash">vtools output variant chr pos ref alt mut_type --limit 20 --header</textarea>
+  </div>
+</div>
+
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>chr	pos     	ref	alt	mut_type
+1  	1115503 	T  	C  	nonsynonymous SNV
+1  	1115548 	G  	A  	nonsynonymous SNV
+1  	1118275 	C  	T  	synonymous SNV
+1  	1120377 	T  	A  	nonsynonymous SNV
+1  	1120431 	G  	A  	nonsynonymous SNV
+1  	3548136 	T  	C  	synonymous SNV
+1  	3548832 	G  	C  	nonsynonymous SNV
+1  	3551737 	C  	T  	nonsynonymous SNV
+1  	3551792 	G  	A  	synonymous SNV
+1  	3555351 	G  	A  	synonymous SNV
+1  	6524501 	T  	C  	nonsynonymous SNV
+1  	6524688 	T  	C  	synonymous SNV
+1  	6524703 	C  	T  	synonymous SNV
+1  	7838196 	A  	G  	nonsynonymous SNV
+1  	10502369	A  	G  	synonymous SNV
+1  	11710561	T  	G  	nonsynonymous SNV
+1  	17914057	G  	A  	nonsynonymous SNV
+1  	17914122	G  	A  	nonsynonymous SNV
+1  	17928672	G  	C  	nonsynonymous SNV
+1  	17949562	C  	T  	synonymous SNV
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+</div>
+
+
+
+<div class="lan_Bash">
+   
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[50]:</div><div class="inner_cell" >
+  <div class="input_area cm-s-ipython" style="min-height: 2.31429em">
+   <textarea rows="1"
+      class="sos-source" name="Bash">vtools_report trans_ratio variant -n num</textarea>
+  </div>
+</div>
+
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>num_of_transition	num_of_transversion	ratio
+161,637          	44,641             	3.62082
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+</div>
+
+
+
+<div class="lan_Bash">
+   
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[51]:</div><div class="inner_cell" >
+  <div class="input_area cm-s-ipython" style="min-height: 2.31429em">
+   <textarea rows="1"
+      class="sos-source" name="Bash">vtools_report trans_ratio variant -n numGD10</textarea>
+  </div>
+</div>
+
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>num_of_transition	num_of_transversion	ratio
+140,392          	38,710             	3.62676
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+</div>
+
+
+
+<div class="lan_Bash">
+   
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[52]:</div><div class="inner_cell" >
+  <div class="input_area cm-s-ipython" style="min-height: 2.31429em">
+   <textarea rows="1"
+      class="sos-source" name="Bash">vtools select variant "DP<15" -t to_remove</textarea>
+  </div>
+</div>
+
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Running: 2 1.0K/s in 00:00:00                                                   
+INFO: 1 variants selected.
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+</div>
+
+
+
+<div class="lan_Bash">
+   
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[53]:</div><div class="inner_cell" >
+  <div class="input_area cm-s-ipython" style="min-height: 2.31429em">
+   <textarea rows="1"
+      class="sos-source" name="Bash">vtools show tables</textarea>
+  </div>
+</div>
+
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>table         #variants     date message
+common_ceu        1,450    Jun29
+to_remove             1    Jun29
+variant           6,987    Jun29 Master variant table
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+</div>
+
+
+
+<div class="lan_Bash">
+   
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[54]:</div><div class="inner_cell" >
+  <div class="input_area cm-s-ipython" style="min-height: 2.31429em">
+   <textarea rows="1"
+      class="sos-source" name="Bash">vtools remove variants to_remove -v0</textarea>
+  </div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+
+
+<div class="lan_Bash">
+   
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[55]:</div><div class="inner_cell" >
+  <div class="input_area cm-s-ipython" style="min-height: 2.31429em">
+   <textarea rows="1"
+      class="sos-source" name="Bash">vtools show tables</textarea>
+  </div>
+</div>
+
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>table         #variants     date message
+common_ceu        1,450    Jun29
+variant           6,986    Jun29 Master variant table
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+</div>
+
+
+
+<div class="lan_Bash">
+   
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[56]:</div><div class="inner_cell" >
+  <div class="input_area cm-s-ipython" style="min-height: 2.31429em">
+   <textarea rows="1"
+      class="sos-source" name="Bash">vtools remove genotypes "DP_geno<10" -v0</textarea>
+  </div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+
+
+<div class="lan_Bash">
+   
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[57]:</div><div class="inner_cell" >
+  <div class="input_area cm-s-ipython" style="min-height: 2.31429em">
+   <textarea rows="1"
+      class="sos-source" name="Bash">vtools select variant "mut_type like 'non%' or mut_type like 'stop%' or region_type='splicing'" -t v_funct</textarea>
+  </div>
+</div>
+
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Running: 10 2.3K/s in 00:00:00                                                  
+INFO: 3524 variants selected.
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+</div>
+
+
+
+<div class="lan_Bash">
+   
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[58]:</div><div class="inner_cell" >
+  <div class="input_area cm-s-ipython" style="min-height: 2.31429em">
+   <textarea rows="1"
+      class="sos-source" name="Bash">vtools show tables</textarea>
+  </div>
+</div>
+
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>table         #variants     date message
+common_ceu        1,450    Jun29
+v_funct           3,524    Jun29
+variant           6,986    Jun29 Master variant table
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+</div>
+
+
+
+<div class="lan_Bash">
+   
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[59]:</div><div class="inner_cell" >
+  <div class="input_area cm-s-ipython" style="min-height: 2.31429em">
+   <textarea rows="1"
+      class="sos-source" name="Bash">vtools show samples --limit 5</textarea>
+  </div>
+</div>
+
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>sample_name	filename                 	panel             	SEX	BMI   	RACE	CEU_totalGD10	CEU_numGD10	YRI_totalGD10	YRI_numGD10
+NA06984    	CEU.exon...notypes.vcf.gz	ILLUMINA          	1  	36.353	1   	2774         	849        	.            	.
+NA06985    	CEU.exon...notypes.vcf.gz	.                 	2  	21.415	1   	1944         	570        	.            	.
+NA06986    	CEU.exon...notypes.vcf.gz	ABI_SOLID+ILLUMINA	1  	26.898	1   	3386         	1029       	.            	.
+NA06989    	CEU.exon...notypes.vcf.gz	ILLUMINA          	2  	25.015	1   	2659         	819        	.            	.
+NA06994    	CEU.exon...notypes.vcf.gz	ABI_SOLID+ILLUMINA	1  	23.858	1   	1730         	486        	.            	.
+(197 records omitted)
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+</div>
+
+
+
+<div class="lan_Bash">
+   
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[60]:</div><div class="inner_cell" >
+  <div class="input_area cm-s-ipython" style="min-height: 2.31429em">
+   <textarea rows="1"
+      class="sos-source" name="Bash">vtools select variant "CEU_mafGD10>=0.05" --samples "RACE=1" -t common_ceu</textarea>
+  </div>
+</div>
+
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>INFO: 90 samples are selected by condition: RACE=1
+Collecting sample variants: 100% [=======================] 90 1.7K/s in 00:00:00
+<span class="ansi-magenta-intense-fg">WARNING</span>: <span class="ansi-magenta-intense-fg">Existing table common_ceu is renamed to common_ceu_Jun29_223254.</span>
+Running: 6 1.2K/s in 00:00:00                                                   
+INFO: 1450 variants selected.
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+</div>
+
+
+
+<div class="lan_Bash">
+   
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[61]:</div><div class="inner_cell" >
+  <div class="input_area cm-s-ipython" style="min-height: 2.31429em">
+   <textarea rows="1"
+      class="sos-source" name="Bash">vtools select v_funct "CEU_mafGD10<0.01" --samples "RACE=1" -t rare_ceu</textarea>
+  </div>
+</div>
+
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>INFO: 90 samples are selected by condition: RACE=1
+Collecting sample variants: 100% [=======================] 90 2.1K/s in 00:00:00
+Running: 6 1.3K/s in 00:00:00                                                   
+INFO: 602 variants selected.
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+</div>
+
+
+
+<div class="lan_Bash">
+   
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[62]:</div><div class="inner_cell" >
+  <div class="input_area cm-s-ipython" style="min-height: 2.31429em">
+   <textarea rows="1"
+      class="sos-source" name="Bash">vtools use refGene</textarea>
+  </div>
+</div>
+
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Binning ranges: 100% [==============================] 41,302 98.8K/s in 00:00:00
+INFO: Using annotation DB refGene as refGene in project VATDemo.
+INFO: refseq Genes
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+</div>
+
+
+
+<div class="lan_Bash">
+   
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[63]:</div><div class="inner_cell" >
+  <div class="input_area cm-s-ipython" style="min-height: 2.31429em">
+   <textarea rows="1"
+      class="sos-source" name="Bash">vtools show annotation refGene</textarea>
+  </div>
+</div>
+
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Annotation database refGene (version hg19_20110909)
+Description:            refseq Genes
+Database type:          range
+Reference genome hg19:  chr, txStart, txEnd
+  name (char)           Gene name
+  chr (char)
+  strand (char)         which DNA strand contains the observed alleles
+  txStart (int)         Transcription start position
+  txEnd (int)           Transcription end position
+  cdsStart (int)        Coding region start
+  cdsEnd (int)          Coding region end
+  exonCount (int)       Number of exons
+  score (int)           Score
+  name2 (char)          Alternative name
+  cdsStartStat (char)   cds start stat, can be &#39;non&#39;, &#39;unk&#39;, &#39;incompl&#39;, and
+                        &#39;cmp1&#39;
+  cdsEndStat (char)     cds end stat, can be &#39;non&#39;, &#39;unk&#39;, &#39;incompl&#39;, and &#39;cmp1&#39;
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+</div>
+
+
+
+<div class="lan_Bash">
+   
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[64]:</div><div class="inner_cell" >
+  <div class="input_area cm-s-ipython" style="min-height: 2.31429em">
+   <textarea rows="1"
+      class="sos-source" name="Bash">vtools associate -h</textarea>
+  </div>
+</div>
+
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>usage: vtools associate [-h] [--covariates [COVARIATES [COVARIATES ...]]]
+                        [--var_info [VAR_INFO [VAR_INFO ...]]]
+                        [--geno_info [GENO_INFO [GENO_INFO ...]]]
+                        [--geno_name GENO_NAME] [-m METHODS [METHODS ...]]
+                        [-g [GROUP_BY [GROUP_BY ...]]] [-s [COND [COND ...]]]
+                        [--genotypes [COND [COND ...]]]
+                        [--discard_samples [EXPR [EXPR ...]]]
+                        [--discard_variants [EXPR [EXPR ...]]]
+                        [--to_db annoDB] [-d DELIMITER] [-f] [-j N]
+                        [-v {0,1,2,3}]
+                        variants phenotypes
+
+Call one or more statistical association tests and return test results as
+fields to variants tested.
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -j N, --jobs N        Number of processes to carry out association tests.
+  -v {0,1,2,3}, --verbosity {0,1,2,3}
+                        Output error and warning (0), info (1), debug (2) and
+                        trace (3) information to standard output (default to
+                        1).
+
+Genotype, phenotype, and covariates:
+  variants              Table of variants to be tested.
+  phenotypes            A list of phenotypes that will be passed to the
+                        association statistics calculator. Currently only a
+                        single phenotype is allowed.
+  --covariates [COVARIATES [COVARIATES ...]]
+                        Optional phenotypes that will be passed to statistical
+                        tests as covariates. Values of these phenotypes should
+                        be integer or float.
+  --var_info [VAR_INFO [VAR_INFO ...]]
+                        Optional variant information fields (e.g. minor allele
+                        frequency from 1000 genomes project) that will be
+                        passed to statistical tests. The fields could be any
+                        annotation fields of with integer or float values,
+                        including those from used annotation databases (use
+                        &#34;vtools show fields&#34; to see a list of usable fields).
+  --geno_info [GENO_INFO [GENO_INFO ...]]
+                        Optional genotype fields (e.g. quality score of
+                        genotype calls, cf. &#34;vtools show genotypes&#34;) that will
+                        be passed to statistical tests. Note that the fields
+                        should exist for all samples that are tested.
+  --geno_name GENO_NAME
+                        Field name of genotype, default to &#39;GT&#39;. If another
+                        field name is specified, for example if imputation
+                        scores are available as &#39;DS&#39; (dosage), then the given
+                        field &#39;DS&#39; will be used as genotype data for
+                        association analysis.
+
+Association tests:
+  -m METHODS [METHODS ...], --methods METHODS [METHODS ...]
+                        Method of one or more association tests. Parameters
+                        for each method should be specified together as a
+                        quoted long argument (e.g. --methods &#34;m --alternative
+                        2&#34; &#34;m1 --permute 1000&#34;), although the common method
+                        parameters can be specified separately, as long as
+                        they do not conflict with command arguments. (e.g.
+                        --methods m1 m2 -p 1000 is equivalent to --methods &#34;m1
+                        -p 1000&#34; &#34;m2 -p 1000&#34;.). You can use command &#39;vtools
+                        show tests&#39; for a list of association tests, and
+                        &#39;vtools show test TST&#39; for details about a test.
+                        Customized association tests can be specified as
+                        mod_name.test_name where mod_name should be a Python
+                        module (system wide or in the current directory), and
+                        test_name should be a subclass of NullTest.
+  -g [GROUP_BY [GROUP_BY ...]], --group_by [GROUP_BY [GROUP_BY ...]]
+                        Group variants by fields. If specified, variants will
+                        be separated into groups and are tested one by one.
+
+Select and filter samples and genotypes:
+  -s [COND [COND ...]], --samples [COND [COND ...]]
+                        Limiting variants from samples that match conditions
+                        that use columns shown in command &#39;vtools show sample&#39;
+                        (e.g. &#39;aff=1&#39;, &#39;filename like &#34;MG%&#34;&#39;). Each line of
+                        the sample table (vtools show samples) is considered
+                        as samples. If genotype of a physical sample is
+                        scattered into multiple samples (e.g. imported
+                        chromosome by chromosome), they should be merged using
+                        command vtools admin.
+  --genotypes [COND [COND ...]]
+                        Limiting genotypes to those matching conditions that
+                        use columns shown in command &#39;vtools show genotypes&#39;
+                        (e.g. &#39;GQ&gt;15&#39;). Genotypes failing such conditions will
+                        be regarded as missing genotypes.
+  --discard_samples [EXPR [EXPR ...]]
+                        Discard samples that match specified conditions within
+                        each test group (defined by parameter --group_by).
+                        Currently only expressions in the form of &#34;%(NA)&gt;p&#34; is
+                        providedted to remove samples that have more 100*p
+                        percent of missing values.
+  --discard_variants [EXPR [EXPR ...]]
+                        Discard variant sites based on specified conditions
+                        within each test group. Currently only expressions in
+                        the form of &#39;%(NA)&gt;p&#39; is provided to remove variant
+                        sites that have more than 100*p percent of missing
+                        genotypes. Note that this filter will be applied after
+                        &#34;--discard_samples&#34; is applied, if the latter also is
+                        specified.
+
+Output of test statistics:
+  --to_db annoDB        Name of a database to which results from association
+                        tests will be written. Groups with existing results in
+                        the database will be ignored unless parameter --force
+                        is used.
+  -d DELIMITER, --delimiter DELIMITER
+                        Delimiter use to separate columns of output. The
+                        default output uses multiple spaces to align columns
+                        of output. Use &#39;-d,&#39; for csv output, or -d&#39;\t&#39; for
+                        tab-delimited output.
+  -f, --force           Analyze all groups including those that have recorded
+                        results in the result database.
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+</div>
+
+
+
+<div class="lan_Bash">
+   
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[65]:</div><div class="inner_cell" >
+  <div class="input_area cm-s-ipython" style="min-height: 2.31429em">
+   <textarea rows="1"
+      class="sos-source" name="Bash">vtools show tests</textarea>
+  </div>
+</div>
+
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>BurdenBt                Burden test for disease traits, Morris &amp; Zeggini 2009
+BurdenQt                Burden test for quantitative traits, Morris &amp; Zeggini
+                        2009
+CFisher                 Fisher&#39;s exact test on collapsed variant loci, Li &amp; Leal
+                        2008
+Calpha                  c-alpha test for unusual distribution of variants
+                        between cases and controls, Neale et al 2011
+CollapseBt              Collapsing method for disease traits, Li &amp; Leal 2008
+CollapseQt              Collapsing method for quantitative traits, Li &amp; Leal
+                        2008
+GroupStat               Calculates basic statistics for each testing group
+GroupWrite              Write data to disk for each testing group
+KBAC                    Kernel Based Adaptive Clustering method, Liu &amp; Leal 2010
+LinRegBurden            A versatile framework of association tests for
+                        quantitative traits
+LogitRegBurden          A versatile framework of association tests for disease
+                        traits
+RBT                     Replication Based Test for protective and deleterious
+                        variants, Ionita-Laza et al 2011
+RTest                   A general framework for association analysis using R
+                        programs
+RareCover               A &#34;covering&#34; method for detecting rare variants
+                        association, Bhatia et al 2010.
+SKAT                    SKAT (Wu et al 2011) and SKAT-O (Lee et al 2012)
+SSeq_common             Score statistic / SCORE-Seq software (Tang &amp; Lin 2011),
+                        for common variants analysis
+SSeq_rare               Score statistic / SCORE-Seq software (Tang &amp; Lin 2011),
+                        for rare variants analysis
+VATStacking             VAT stacking with resampling-based p-value adjustment
+                        for applying many algorithms
+VTtest                  VT statistic for disease traits, Price et al 2010
+VariableThresholdsBt    Variable thresholds method for disease traits, in the
+                        spirit of Price et al 2010
+VariableThresholdsQt    Variable thresholds method for quantitative traits, in
+                        the spirit of Price et al 2010
+WSSRankTest             Weighted sum method using rank test statistic, Madsen &amp;
+                        Browning 2009
+WeightedBurdenBt        Weighted genotype burden tests for disease traits, using
+                        one or many arbitrary external weights as well as one of
+                        4 internal weighting themes
+WeightedBurdenQt        Weighted genotype burden tests for quantitative traits,
+                        using one or many arbitrary external weights as well as
+                        one of 4 internal weighting themes
+aSum                    Adaptive Sum score test for protective and deleterious
+                        variants, Han &amp; Pan 2010
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+</div>
+
+
+
+<div class="lan_Bash">
+   
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[66]:</div><div class="inner_cell" >
+  <div class="input_area cm-s-ipython" style="min-height: 2.31429em">
+   <textarea rows="1"
+      class="sos-source" name="Bash">vtools show test LinRegBurden</textarea>
+  </div>
+</div>
+
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Name:          LinRegBurden
+Description:   A versatile framework of association tests for quantitative traits
+usage: vtools associate --method LinRegBurden [-h] [--name NAME]
+                                              [-q1 MAFUPPER] [-q2 MAFLOWER]
+                                              [--alternative TAILED]
+                                              [--use_indicator] [-p N]
+                                              [--permute_by XY] [--adaptive C]
+                                              [--variable_thresholds]
+                                              [--extern_weight [EXTERN_WEIGHT [EXTERN_WEIGHT ...]]]
+                                              [--weight {Browning_all,Browning,KBAC,RBT}]
+                                              [--NA_adjust]
+                                              [--moi {additive,dominant,recessive}]
+
+Linear regression test. p-value is based on the significance level of the
+regression coefficient for genotypes. If --group_by option is specified, it
+will collapse the variants within a group into a generic genotype score
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --name NAME           Name of the test that will be appended to names of
+                        output fields, usually used to differentiate output of
+                        different tests, or the same test with different
+                        parameters.
+  -q1 MAFUPPER, --mafupper MAFUPPER
+                        Minor allele frequency upper limit. All variants
+                        having sample MAF&lt;=m1 will be included in analysis.
+                        Default set to 1.0
+  -q2 MAFLOWER, --maflower MAFLOWER
+                        Minor allele frequency lower limit. All variants
+                        having sample MAF&gt;m2 will be included in analysis.
+                        Default set to 0.0
+  --alternative TAILED  Alternative hypothesis is one-sided (&#34;1&#34;) or two-sided
+                        (&#34;2&#34;). Default set to 1
+  --use_indicator       This option, if evoked, will apply binary coding to
+                        genotype groups (coding will be &#34;1&#34; if ANY locus in
+                        the group has the alternative allele, &#34;0&#34; otherwise)
+  -p N, --permutations N
+                        Number of permutations
+  --permute_by XY       Permute phenotypes (&#34;Y&#34;) or genotypes (&#34;X&#34;). Default
+                        is &#34;Y&#34;
+  --adaptive C          Adaptive permutation using Edwin Wilson 95 percent
+                        confidence interval for binomial distribution. The
+                        program will compute a p-value every 1000 permutations
+                        and compare the lower bound of the 95 percent CI of
+                        p-value against &#34;C&#34;, and quit permutations with the
+                        p-value if it is larger than &#34;C&#34;. It is recommended to
+                        specify a &#34;C&#34; that is slightly larger than the
+                        significance level for the study. To disable the
+                        adaptive procedure, set C=1. Default is C=0.1
+  --variable_thresholds
+                        This option, if evoked, will apply variable thresholds
+                        method to the permutation routine in burden test on
+                        aggregated variant loci
+  --extern_weight [EXTERN_WEIGHT [EXTERN_WEIGHT ...]]
+                        External weights that will be directly applied to
+                        genotype coding. Names of these weights should be in
+                        one of &#39;--var_info&#39; or &#39;--geno_info&#39;. If multiple
+                        weights are specified, they will be applied to
+                        genotypes sequentially. Note that all weights will be
+                        masked if --use_indicator is evoked.
+  --weight {Browning_all,Browning,KBAC,RBT}
+                        Internal weighting themes inspired by various
+                        association methods. Valid choices are:
+                        &#39;Browning_all&#39;, &#39;Browning&#39;, &#39;KBAC&#39; and &#39;RBT&#39;. Except
+                        for &#39;Browning_all&#39; weighting, tests using all other
+                        weighting themes has to calculate p-value via
+                        permutation. For details of the weighting themes,
+                        please refer to the online documentation.
+  --NA_adjust           This option, if evoked, will replace missing genotype
+                        values with a score relative to sample allele
+                        frequencies. The association test will be adjusted to
+                        incorporate the information. This is an effective
+                        approach to control for type I error due to
+                        differential degrees of missing genotypes among
+                        samples.
+  --moi {additive,dominant,recessive}
+                        Mode of inheritance. Will code genotypes as 0/1/2/NA
+                        for additive mode, 0/1/NA for dominant or recessive
+                        mode. Default set to additive
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+</div>
+
+
+
+<div class="lan_Bash">
+   
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[67]:</div><div class="inner_cell" >
+  <div class="input_area cm-s-ipython" style="min-height: 2.31429em">
+   <textarea rows="1"
+      class="sos-source" name="Bash">vtools associate common_ceu BMI --covariate SEX --samples "RACE=1" -m "LinRegBurden --alternative 2" -j1 --to_db EA_CV > EA_CV.asso.res</textarea>
+  </div>
+</div>
+
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>INFO: 90 samples are selected by condition: (RACE=1)
+INFO: 1450 groups are found
+Loading genotypes: 100% [===============================] 90 208.4/s in 00:00:00
+Testing for association: 100% [====================] 1,450/<span class="ansi-red-intense-fg ansi-bold">5</span> 644.3/s in 00:00:02
+INFO: Association tests on 1450 groups have completed. 5 failed.
+INFO: Using annotation DB EA_CV as EA_CV in project VATDemo.
+INFO: Annotation database used to record results of association tests. Created on Fri, 29 Jun 2018 22:33:05
+INFO: 1450 out of 6986 variant.chr, variant.pos are annotated through annotation database EA_CV
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+</div>
+
+
+
+<div class="lan_Bash">
+   
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[68]:</div><div class="inner_cell" >
+  <div class="input_area cm-s-ipython" style="min-height: 2.31429em">
+   <textarea rows="1"
+      class="sos-source" name="Bash">grep -i error *.log | tail -10</textarea>
+  </div>
+</div>
+
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>2018-06-29 17:25:31,304: DEBUG: Failed to execute geneanno as SQL query: Failed to execute SQL query &#34;ANNOVAR geneanno&#34;: near &#34;ANNOVAR&#34;: syntax error
+2018-06-29 17:28:16,169: DEBUG: Failed to execute  as SQL query: Failed to execute SQL query &#34;KING &#34;: near &#34;KING&#34;: syntax error
+2018-06-29 17:28:16,192: ERROR: Failed to execute step king_10: Command king does not exist. Please install it and try again.
+2018-06-29 17:29:10,078: DEBUG: Failed to execute  as SQL query: Failed to execute SQL query &#34;KING &#34;: near &#34;KING&#34;: syntax error
+2018-06-29 17:29:10,672: ERROR: Failed to execute step king_10: Command king does not exist. Please install it and try again.
+2018-06-29 17:33:10,306: DEBUG: An ERROR has occurred in process 0 while processing &#39;6:29910604&#39;: Sample size too small (2) to be analyzed for &#39;6:29910604&#39;.
+2018-06-29 17:33:10,311: DEBUG: An ERROR has occurred in process 0 while processing &#39;6:29910742&#39;: Sample size too small (2) to be analyzed for &#39;6:29910742&#39;.
+2018-06-29 17:33:10,515: DEBUG: An ERROR has occurred in process 0 while processing &#39;7:148921732&#39;: Sample size too small (2) to be analyzed for &#39;7:148921732&#39;.
+2018-06-29 17:33:10,608: DEBUG: An ERROR has occurred in process 0 while processing &#39;8:145747920&#39;: Sample size too small (4) to be analyzed for &#39;8:145747920&#39;.
+2018-06-29 17:33:10,615: DEBUG: An ERROR has occurred in process 0 while processing &#39;9:215057&#39;: Sample size too small (4) to be analyzed for &#39;9:215057&#39;.
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+</div>
+
+
+
+<div class="lan_Bash">
+   
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[69]:</div><div class="inner_cell" >
+  <div class="input_area cm-s-ipython" style="min-height: 2.31429em">
+   <textarea rows="1"
+      class="sos-source" name="Bash">head EA_CV.asso.res</textarea>
+  </div>
+</div>
+
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>variant_chr	variant_pos	sample_size_LinRegBurden	num_variants_LinRegBurden	total_mac_LinRegBurden	beta_x_LinRegBurden	pvalue_LinRegBurden	wald_x_LinRegBurden	beta_2_LinRegBurden	beta_2_pvalue_LinRegBurden	wald_2_LinRegBurden
+1          	1115503    	39                      	1                        	4                     	-3.79867           	0.303847           	-1.04312           	1.81933            	0.423273                  	0.809982
+1          	3548136    	44                      	1                        	15                    	1.87087            	0.374567           	0.897738           	0.0423982          	0.984496                  	0.0195514
+1          	3548832    	78                      	1                        	13                    	1.29502            	0.562724           	0.581386           	-0.753517          	0.651351                  	-0.453706
+1          	3551792    	75                      	1                        	8                     	4.31445            	0.102654           	1.65315            	-1.38652           	0.3924                    	-0.860446
+1          	6524501    	62                      	1                        	10                    	1.10259            	0.671892           	0.425678           	-1.16366           	0.544558                  	-0.609463
+1          	6524688    	63                      	1                        	7                     	-1.34283           	0.632522           	-0.480637          	0.376518           	0.831142                  	0.214169
+1          	11710561   	38                      	1                        	9                     	0.0203366          	0.992064           	0.0100182          	2.19027            	0.370985                  	0.906279
+1          	17914057   	68                      	1                        	11                    	-2.23783           	0.387371           	-0.870241          	-1.0346            	0.588188                  	-0.544168
+1          	17914122   	64                      	1                        	11                    	3.03457            	0.240427           	1.18548            	-1.02577           	0.600161                  	-0.526919
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+</div>
+
+
+
+<div class="lan_Bash">
+   
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[70]:</div><div class="inner_cell" >
+  <div class="input_area cm-s-ipython" style="min-height: 2.31429em">
+   <textarea rows="1"
+      class="sos-source" name="Bash">sort -g -k7 EA_CV.asso.res | head</textarea>
+  </div>
+</div>
+
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>variant_chr	variant_pos	sample_size_LinRegBurden	num_variants_LinRegBurden	total_mac_LinRegBurden	beta_x_LinRegBurden	pvalue_LinRegBurden	wald_x_LinRegBurden	beta_2_LinRegBurden	beta_2_pvalue_LinRegBurden	wald_2_LinRegBurden
+11         	108383676  	88                      	1                        	25                    	6.53168            	0.000105185        	4.06922            	0.0735287          	0.961696                  	0.0481674
+19         	16008257   	54                      	1                        	17                    	7.31337            	0.00038548         	3.80137            	1.45651            	0.466234                  	0.734125
+16         	57735900   	71                      	1                        	41                    	-5.19002           	0.000386273        	-3.73498           	0.570017           	0.721588                  	0.357818
+19         	16008388   	34                      	1                        	9                     	6.97057            	0.00279873         	3.24718            	2.8695             	0.200913                  	1.30674
+19         	16006413   	47                      	1                        	13                    	6.7213             	0.002973           	3.14519            	0.614935           	0.775703                  	0.28668
+9          	35792423   	32                      	1                        	15                    	6.60852            	0.00564457         	2.98954            	0.820153           	0.714935                  	0.368829
+2          	49191041   	88                      	1                        	73                    	3.34503            	0.00656039         	2.78702            	0.947342           	0.552026                  	0.597102
+17         	33768354   	44                      	1                        	42                    	-4.13311           	0.00686359         	-2.84707           	-2.08353           	0.319621                  	-1.00746
+8          	121215991  	86                      	1                        	77                    	-3.34412           	0.00722408         	-2.75438           	0.63102            	0.697061                  	0.390644
+sort: write failed: standard output: Broken pipe
+sort: write error
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+</div>
+
+
+
+<div class="lan_Bash">
+   
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[71]:</div><div class="inner_cell" >
+  <div class="input_area cm-s-ipython" style="min-height: 2.31429em">
+   <textarea rows="1"
+      class="sos-source" name="Bash">vtools associate rare_ceu BMI --covariate SEX --samples "RACE=1" -m "LinRegBurden --alternative 2" -g refGene.name2 -j1 --to_db EA_RV  > EA_RV.asso.res</textarea>
+  </div>
+</div>
+
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>INFO: 90 samples are selected by condition: (RACE=1)
+INFO: 404 groups are found
+Loading genotypes: 100% [===============================] 90 241.3/s in 00:00:00
+Testing for association: 100% [=====================] 404/<span class="ansi-red-intense-fg ansi-bold">13</span> 584.6/s in 00:00:00
+INFO: Association tests on 404 groups have completed. 13 failed.
+INFO: Using annotation DB EA_RV as EA_RV in project VATDemo.
+INFO: Annotation database used to record results of association tests. Created on Fri, 29 Jun 2018 22:33:17
+INFO: 404 out of 23269 refGene.refGene.name2 are annotated through annotation database EA_RV
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+</div>
+
+
+
+<div class="lan_Bash">
+   
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[72]:</div><div class="inner_cell" >
+  <div class="input_area cm-s-ipython" style="min-height: 2.31429em">
+   <textarea rows="1"
+      class="sos-source" name="Bash">grep -i error *.log | tail -10</textarea>
+  </div>
+</div>
+
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>2018-06-29 17:33:20,124: DEBUG: An ERROR has occurred in process 0 while processing &#39;BCL2L15&#39;: No variant found in genotype data for &#39;BCL2L15&#39;.
+2018-06-29 17:33:20,181: DEBUG: An ERROR has occurred in process 0 while processing &#39;CDHR5&#39;: No variant found in genotype data for &#39;CDHR5&#39;.
+2018-06-29 17:33:20,189: DEBUG: An ERROR has occurred in process 0 while processing &#39;CERS3&#39;: No variant found in genotype data for &#39;CERS3&#39;.
+2018-06-29 17:33:20,213: DEBUG: An ERROR has occurred in process 0 while processing &#39;CTSW&#39;: No variant found in genotype data for &#39;CTSW&#39;.
+2018-06-29 17:33:20,366: DEBUG: An ERROR has occurred in process 0 while processing &#39;LOC100287722&#39;: No variant found in genotype data for &#39;LOC100287722&#39;.
+2018-06-29 17:33:20,420: DEBUG: An ERROR has occurred in process 0 while processing &#39;NOM1&#39;: Sample size too small (1) to be analyzed for &#39;NOM1&#39;.
+2018-06-29 17:33:20,438: DEBUG: An ERROR has occurred in process 0 while processing &#39;OR10J1&#39;: No variant found in genotype data for &#39;OR10J1&#39;.
+2018-06-29 17:33:20,531: DEBUG: An ERROR has occurred in process 0 while processing &#39;PRG3&#39;: No variant found in genotype data for &#39;PRG3&#39;.
+2018-06-29 17:33:20,645: DEBUG: An ERROR has occurred in process 0 while processing &#39;SULT1A1&#39;: No variant found in genotype data for &#39;SULT1A1&#39;.
+2018-06-29 17:33:20,670: DEBUG: An ERROR has occurred in process 0 while processing &#39;TMCC1&#39;: No variant found in genotype data for &#39;TMCC1&#39;.
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+</div>
+
+
+
+<div class="lan_Bash">
+   
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[73]:</div><div class="inner_cell" >
+  <div class="input_area cm-s-ipython" style="min-height: 2.31429em">
+   <textarea rows="1"
+      class="sos-source" name="Bash">head EA_RV.asso.res</textarea>
+  </div>
+</div>
+
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>refgene_name2	sample_size_LinRegBurden	num_variants_LinRegBurden	total_mac_LinRegBurden	beta_x_LinRegBurden	pvalue_LinRegBurden	wald_x_LinRegBurden	beta_2_LinRegBurden	beta_2_pvalue_LinRegBurden	wald_2_LinRegBurden
+AATF         	89                      	3                        	3                     	4.06571            	0.371806           	0.897786           	0.819087           	0.617609                  	0.501059
+ABCB9        	58                      	1                        	1                     	4.29374            	0.561422           	0.584278           	0.0901042          	0.962807                  	0.0468439
+ABLIM3       	90                      	2                        	2                     	-7.83832           	0.158126           	-1.42364           	0.466136           	0.774715                  	0.287105
+ACCN3        	56                      	1                        	1                     	9.84035            	0.17451            	1.37632            	-1.2081            	0.530485                  	-0.631412
+ACHE         	76                      	1                        	1                     	1.51292            	0.845698           	0.195304           	-0.186314          	0.916242                  	-0.105534
+ACTL8        	81                      	2                        	2                     	-4.82112           	0.378176           	-0.886308          	0.25399            	0.88081                   	0.150435
+ADAM29       	88                      	1                        	1                     	-6.52372           	0.403205           	-0.840108          	0.850198           	0.606861                  	0.516479
+ADAMTS4      	69                      	1                        	1                     	0.171944           	0.981712           	0.0230098          	-0.771931          	0.667839                  	-0.431047
+AHNAK        	89                      	4                        	4                     	-1.18887           	0.764332           	-0.300749          	0.914744           	0.578008                  	0.55842
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+</div>
+
+
+
+<div class="lan_Bash">
+   
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[74]:</div><div class="inner_cell" >
+  <div class="input_area cm-s-ipython" style="min-height: 2.31429em">
+   <textarea rows="1"
+      class="sos-source" name="Bash">sort -g -k6 EA_RV.asso.res | head</textarea>
+  </div>
+</div>
+
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>refgene_name2	sample_size_LinRegBurden	num_variants_LinRegBurden	total_mac_LinRegBurden	beta_x_LinRegBurden	pvalue_LinRegBurden	wald_x_LinRegBurden	beta_2_LinRegBurden	beta_2_pvalue_LinRegBurden	wald_2_LinRegBurden
+CIDEA        	73                      	1                        	1                     	20.294             	0.00504822         	2.89536            	-0.235139          	0.885684                  	-0.144293
+SPP2         	90                      	2                        	2                     	15.0031            	0.00549521         	2.8476             	0.792108           	0.611456                  	0.509838
+WNT16        	88                      	1                        	1                     	20.703             	0.00683376         	2.77254            	1.17245            	0.460926                  	0.740684
+CRTAP        	77                      	1                        	1                     	20.4367            	0.00723434         	2.76236            	0.580854           	0.730853                  	0.345294
+CYP24A1      	83                      	1                        	1                     	20.5275            	0.00790623         	2.72451            	1.1321             	0.49334                   	0.688164
+MFAP1        	86                      	1                        	1                     	18.4607            	0.0133889          	2.52736            	-0.228389          	0.884407                  	-0.145832
+MBD5         	90                      	4                        	4                     	9.56169            	0.0144442          	2.49605            	0.362862           	0.818813                  	0.229766
+SLA          	89                      	1                        	1                     	16.0687            	0.0380065          	2.10727            	0.548345           	0.73386                   	0.3411
+THRB         	90                      	2                        	2                     	10.2182            	0.0617212          	1.89271            	0.796836           	0.617967                  	0.500528
+sort: write failed: standard output: Broken pipe
+sort: write error
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+</div>
+
+
+
+<div class="lan_Bash">
+   
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[75]:</div><div class="inner_cell" >
+  <div class="input_area cm-s-ipython" style="min-height: 3.5285800000000003em">
+   <textarea rows="2"
+      class="sos-source" name="Bash">vtools associate rare_ceu BMI --covariate SEX --samples "RACE=1" -m "VariableThresholdsQt --alternative 2 -p 100000 --adaptive 0.0005" \
+    -g refGene.name2 -j1 --to_db EA_RV > EA_RV_VT.asso.res</textarea>
+  </div>
+</div>
+
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>INFO: 90 samples are selected by condition: (RACE=1)
+INFO: 404 groups are found
+Loading genotypes: 100% [================================] 90 55.4/s in 00:00:01
+Testing for association: 100% [======================] 404/<span class="ansi-red-intense-fg ansi-bold">13</span> 82.6/s in 00:00:04
+INFO: Association tests on 404 groups have completed. 13 failed.
+INFO: Using annotation DB EA_RV as EA_RV in project VATDemo.
+INFO: Annotation database used to record results of association tests. Created on Fri, 29 Jun 2018 22:33:17
+INFO: 404 out of 23269 refGene.refGene.name2 are annotated through annotation database EA_RV
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+</div>
+
+
+
+<div class="lan_Bash">
+   
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[76]:</div><div class="inner_cell" >
+  <div class="input_area cm-s-ipython" style="min-height: 2.31429em">
+   <textarea rows="1"
+      class="sos-source" name="Bash">grep -i error *.log | tail -10</textarea>
+  </div>
+</div>
+
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>2018-06-29 17:33:30,799: DEBUG: An ERROR has occurred in process 0 while processing &#39;BCL2L15&#39;: No variant found in genotype data for &#39;BCL2L15&#39;.
+2018-06-29 17:33:31,160: DEBUG: An ERROR has occurred in process 0 while processing &#39;CDHR5&#39;: No variant found in genotype data for &#39;CDHR5&#39;.
+2018-06-29 17:33:31,211: DEBUG: An ERROR has occurred in process 0 while processing &#39;CERS3&#39;: No variant found in genotype data for &#39;CERS3&#39;.
+2018-06-29 17:33:31,367: DEBUG: An ERROR has occurred in process 0 while processing &#39;CTSW&#39;: No variant found in genotype data for &#39;CTSW&#39;.
+2018-06-29 17:33:32,386: DEBUG: An ERROR has occurred in process 0 while processing &#39;LOC100287722&#39;: No variant found in genotype data for &#39;LOC100287722&#39;.
+2018-06-29 17:33:32,801: DEBUG: An ERROR has occurred in process 0 while processing &#39;NOM1&#39;: Sample size too small (1) to be analyzed for &#39;NOM1&#39;.
+2018-06-29 17:33:32,935: DEBUG: An ERROR has occurred in process 0 while processing &#39;OR10J1&#39;: No variant found in genotype data for &#39;OR10J1&#39;.
+2018-06-29 17:33:33,641: DEBUG: An ERROR has occurred in process 0 while processing &#39;PRG3&#39;: No variant found in genotype data for &#39;PRG3&#39;.
+2018-06-29 17:33:34,444: DEBUG: An ERROR has occurred in process 0 while processing &#39;SULT1A1&#39;: No variant found in genotype data for &#39;SULT1A1&#39;.
+2018-06-29 17:33:34,634: DEBUG: An ERROR has occurred in process 0 while processing &#39;TMCC1&#39;: No variant found in genotype data for &#39;TMCC1&#39;.
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+</div>
+
+
+
+<div class="lan_Bash">
+   
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[77]:</div><div class="inner_cell" >
+  <div class="input_area cm-s-ipython" style="min-height: 2.31429em">
+   <textarea rows="1"
+      class="sos-source" name="Bash">head EA_RV_VT.asso.res</textarea>
+  </div>
+</div>
+
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>refgene_name2	sample_size_VTQt	num_variants_VTQt	total_mac_VTQt	beta_x_VTQt	pvalue_VTQt	std_error_VTQt	num_permutations_VTQt	MAF_threshold_VTQt
+AATF         	89              	3                	3             	4.06571    	0.405594   	4.50659       	1000                 	0.00561798
+ABCB9        	58              	1                	1             	4.29374    	0.659341   	7.16459       	1000                 	0.00862069
+ABLIM3       	90              	2                	2             	-7.83832   	0.135864   	5.4353        	1000                 	0.00555556
+ACCN3        	56              	1                	1             	9.84035    	0.171828   	7.06708       	1000                 	0.00892857
+ACHE         	76              	1                	1             	1.51292    	0.799201   	7.50048       	1000                 	0.00657895
+ACTL8        	81              	2                	2             	-4.82112   	0.433566   	5.42058       	1000                 	0.00617284
+ADAM29       	88              	1                	1             	-6.52372   	0.4995     	7.64897       	1000                 	0.00568182
+ADAMTS4      	69              	1                	1             	0.171944   	0.935065   	7.28058       	1000                 	0.00724638
+AHNAK        	89              	4                	4             	-1.18887   	0.761239   	3.91307       	1000                 	0.00561798
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+</div>
+
+
+
+<div class="lan_Bash">
+   
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[78]:</div><div class="inner_cell" >
+  <div class="input_area cm-s-ipython" style="min-height: 2.31429em">
+   <textarea rows="1"
+      class="sos-source" name="Bash">sort -g -k6 EA_RV_VT.asso.res | head</textarea>
+  </div>
+</div>
+
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>refgene_name2	sample_size_VTQt	num_variants_VTQt	total_mac_VTQt	beta_x_VTQt	pvalue_VTQt	std_error_VTQt	num_permutations_VTQt	MAF_threshold_VTQt
+SPP2         	90              	2                	2             	15.0031    	0.00999001 	5.5654        	1000                 	0.00555556
+CRTAP        	77              	1                	1             	20.4367    	0.011988   	7.72247       	1000                 	0.00649351
+CYP24A1      	83              	1                	1             	20.5275    	0.013986   	7.76257       	1000                 	0.0060241
+CIDEA        	73              	1                	1             	20.294     	0.017982   	7.5195        	1000                 	0.00684932
+NRG1         	87              	1                	1             	-11.5171   	0.017982   	7.99103       	1000                 	0.00574713
+WNT16        	88              	1                	1             	20.703     	0.01998    	7.64807       	1000                 	0.00568182
+FUCA2        	80              	1                	1             	-10.9701   	0.025974   	7.74197       	1000                 	0.00625
+LRRC27       	79              	1                	1             	-11.6328   	0.031968   	7.62696       	1000                 	0.00632911
+PDSS1        	55              	1                	1             	-11.7564   	0.033966   	7.79539       	1000                 	0.00909091
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+</div>
+
+
+
+<div class="lan_Bash">
+   
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[79]:</div><div class="inner_cell" >
+  <div class="input_area cm-s-ipython" style="min-height: 3.5285800000000003em">
+   <textarea rows="2"
+      class="sos-source" name="Bash">vtools_report plot_association qq -o QQRV -b --label_top 2 -f 6 < EA_RV.asso.res
+vtools_report plot_association manhattan -o MHRV -b --label_top 5 --color Dark2 --chrom_prefix None -f 6 < EA_RV.asso.res</textarea>
+  </div>
+</div>
+
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>INFO: Reading from standard input ...
+INFO: Processing 78K of input data ...
+INFO: Generating graph(s) ...
+Genomic inflation factor for method &#39;LinRegBurden&#39; is: 1.25185482052633
+INFO: Complete!
+INFO: Reading from standard input ...
+INFO: Processing 78K of input data ...
+--2018-06-29 17:33:51--  http://bioinformatics.mdanderson.org/Software/VariantTools/repository/resource/refgene.pkl
+Resolving bioinformatics.mdanderson.org (bioinformatics.mdanderson.org)... 143.111.2.220
+Connecting to bioinformatics.mdanderson.org (bioinformatics.mdanderson.org)|143.111.2.220|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/plain]
+Saving to: ‘/home/gaow/.variant_tools/resource/refgene_tmp2492.pkl’
+
+/home/gaow/.variant     [     &lt;=&gt;              ]   1.40M  1.32MB/s   in 1.1s   
+
+2018-06-29 17:33:53 (1.32 MB/s) - ‘/home/gaow/.variant_tools/resource/refgene_tmp2492.pkl’ saved [1465392]
+
+INFO: Generating graph(s) ...
+INFO: Complete!
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+</div>
+
+
+  
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Need to download PLINK 1.07 <a href="http://zzz.bwh.harvard.edu/plink/dist/plink-1.07-x86_64.zip">http://zzz.bwh.harvard.edu/plink/dist/plink-1.07-x86_64.zip</a>
+and KING <a href="http://people.virginia.edu/~wc9c/KING/executables/Linux-king214.tar.gz">http://people.virginia.edu/~wc9c/KING/executables/Linux-king214.tar.gz</a></p>
+
+</div>
+</div>
+</div>
+
+<div class="lan_Bash">
+   
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[81]:</div><div class="inner_cell" >
+  <div class="input_area cm-s-ipython" style="min-height: 3.5285800000000003em">
+   <textarea rows="2"
+      class="sos-source" name="Bash">export PATH=/home/gaow/tmp/29-Jun-2018:$PATH
+vtools execute KING</textarea>
+  </div>
+</div>
+
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>INFO: Executing <span class="ansi-green-fg">KING.king_0</span>: Load specified snapshot if a snapshot is specified. Otherwise use the existing project.
+INFO: Executing <span class="ansi-green-fg">KING.king_10</span>: Check the existence of KING and PLINK command.
+INFO: Command king is located.
+INFO: Command plink is located.
+INFO: Executing <span class="ansi-green-fg">KING.king_20</span>: Write selected variant and samples in tped format
+INFO: Running <span class="ansi-green-fg">vtools export variant --format tped --samples &#34;1&#34; | awk &#39;{$2=$1&#34;_&#34;$4;$3=0;print $0}&#39; &gt; /home/gaow/Documents/GIT/wiki/ismb-2018/data/.vtools_cache/KING.tped</span>
+INFO: Executing <span class="ansi-green-fg">KING.king_21</span>: Rename tfam file to match tped file
+INFO: Running <span class="ansi-green-fg">mv variant.tfam /home/gaow/Documents/GIT/wiki/ismb-2018/data/.vtools_cache/KING.tfam</span>
+INFO: Executing <span class="ansi-green-fg">KING.king_30</span>: Calculate LD pruning candidate list with a cutoff of R^2=0.5
+INFO: Running <span class="ansi-green-fg">plink --noweb --tped KING.tped --tfam KING.tfam --indep-pairwise 50 5 0.5 --allow-no-sex --out KING.LD.50</span> under /home/gaow/Documents/GIT/wiki/ismb-2018/data/.vtools_cache
+INFO: Executing <span class="ansi-green-fg">KING.king_31</span>: LD pruning from pre-calculated list
+INFO: Running <span class="ansi-green-fg">plink --noweb --tped KING.tped --tfam KING.tfam --extract KING.LD.50.prune.in --no-parents --no-sex --no-pheno --maf 0.01 --make-bed --out KING</span> under /home/gaow/Documents/GIT/wiki/ismb-2018/data/.vtools_cache
+INFO: Executing <span class="ansi-green-fg">KING.king_41</span>: Global ancestry inference
+INFO: Running <span class="ansi-green-fg">king -b KING.bed --mds --ibs --prefix KING-</span> under /home/gaow/Documents/GIT/wiki/ismb-2018/data/.vtools_cache
+INFO: Executing <span class="ansi-green-fg">KING.king_42</span>: Kinship inference
+INFO: Running <span class="ansi-green-fg">king -b KING.bed --kinship --related --degree 3 --prefix KING</span> under /home/gaow/Documents/GIT/wiki/ismb-2018/data/.vtools_cache
+INFO: Executing <span class="ansi-green-fg">KING.king_51</span>: Extract MDS result for vtools phenotype import
+INFO: Running <span class="ansi-green-fg">cut KING-pc.ped -f 2,`seq -s, 7 $((6+5))` -d &#34; &#34; | sed -e &#34;s/ /\\t/g&#34; | sed 1i&#34;sample_name`seq -s, 1 5 | awk -F, &#39;{if (NF&gt;20) NF=20; for (i=1; i&lt;=NF; ++i) printf(&#34;\\t%s&#34;, &#34;KING_MDS&#34;$i)}&#39;`&#34; &gt; KING-mds.vtools.txt</span> under /home/gaow/Documents/GIT/wiki/ismb-2018/data/.vtools_cache
+INFO: Executing <span class="ansi-green-fg">KING.king_52</span>: Import phenotype from global ancestry analysis
+INFO: Running <span class="ansi-green-fg">vtools phenotype --from_file /home/gaow/Documents/GIT/wiki/ismb-2018/data/.vtools_cache/KING-mds.vtools.txt</span>
+INFO: Adding phenotype KING_MDS1 of type FLOAT
+INFO: Adding phenotype KING_MDS2 of type FLOAT
+INFO: Adding phenotype KING_MDS3 of type FLOAT
+INFO: Adding phenotype KING_MDS4 of type FLOAT
+INFO: Adding phenotype KING_MDS5 of type FLOAT
+INFO: 5 field (5 new, 0 existing) phenotypes of 196 samples are updated.
+INFO: Executing <span class="ansi-green-fg">KING.king_61</span>: Save global ancestry inference result to plot
+INFO: Running <span class="ansi-green-fg">vtools_report plot_pheno_fields KING_MDS1 KING_MDS2 --samples &#34;1&#34; --dot KING.mds.pdf --discrete_color Accent</span>
+INFO: Executing <span class="ansi-green-fg">KING.king_62</span>: Save kinship analysis result to text file
+INFO: Running <span class="ansi-green-fg">cat /home/gaow/Documents/GIT/wiki/ismb-2018/data/.vtools_cache/KING.kin0 | cut -f 2,4,6,7,8 | awk &#39;{ if ($5&gt;0.0442) print $0}&#39; | awk &#39;{if ($5&gt;0.354) $6=&#34;MZ&#34;; if ($5&gt;=0.177 &amp;&amp; $5&lt;=0.354) $6=&#34;1st-degree&#34;; if ($5&gt;=0.0884 &amp;&amp; $5&lt;=0.177) $6=&#34;2nd-degree&#34;; if ($5&gt;=0.0442 &amp;&amp; $5&lt;=0.0884) $6=&#34;3rd-degree&#34;; if ($5==&#34;Kinship&#34;) $6=&#34;Relationship&#34;; print $0}&#39; &gt; KING.RelatedIndividuals.txt</span>
+INFO: Execution of pipeline KING.king is successful with output KING.RelatedIndividuals.txt
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+</div>
+
+
+
+<div class="lan_SoS">
+   
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[84]:</div><div class="inner_cell" >
+  <div class="input_area cm-s-ipython" style="min-height: 2.31429em">
+   <textarea rows="1"
+      class="sos-source" name="SoS">%preview KING.mds.pdf -n </textarea>
+  </div>
+</div>
+
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+<div class="sos_hint">> KING.mds.pdf (6.1 KiB):</div>
+</div>
+
+</div>
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+<iframe src=KING.mds.pdf width="800px" height="600.0px"></iframe>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+</div>
+
+
+
+<div class="lan_Bash">
+   
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div><div class="inner_cell" >
+  <div class="input_area cm-s-ipython" style="min-height: 2.31429em">
+   <textarea rows="1"
+      class="sos-source" name="Bash">vtools associate rare_ceu BMI --covariate SEX KING_MDS1 KING_MDS2 -m "LinRegBurden --name RVMDS2 --alternative 2" -g refGene.name2 -j1 --to_db EA_RV > EA_RV_MDS2.asso.res</textarea>
+  </div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+
+
+<div class="lan_Bash">
+   
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[85]:</div><div class="inner_cell" >
+  <div class="input_area cm-s-ipython" style="min-height: 2.31429em">
+   <textarea rows="1"
+      class="sos-source" name="Bash">vtools_report plot_association qq -o QQRV_MDS2 -b --label_top 2 -f 6 < EA_RV_MDS2.asso.res</textarea>
+  </div>
+</div>
+
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre><span class="ansi-magenta-intense-fg">WARNING</span>: <span class="ansi-magenta-intense-fg">Sample NA12889 is ignored due to missing value for phenotype KING_MDS1</span>
+<span class="ansi-magenta-intense-fg">WARNING</span>: <span class="ansi-magenta-intense-fg">Sample NA12889 is ignored due to missing value for phenotype KING_MDS2</span>
+<span class="ansi-magenta-intense-fg">WARNING</span>: <span class="ansi-magenta-intense-fg">Sample NA18504 is ignored due to missing value for phenotype KING_MDS1</span>
+<span class="ansi-magenta-intense-fg">WARNING</span>: <span class="ansi-magenta-intense-fg">Sample NA18504 is ignored due to missing value for phenotype KING_MDS2</span>
+<span class="ansi-magenta-intense-fg">WARNING</span>: <span class="ansi-magenta-intense-fg">Sample NA18516 is ignored due to missing value for phenotype KING_MDS1</span>
+<span class="ansi-magenta-intense-fg">WARNING</span>: <span class="ansi-magenta-intense-fg">Sample NA18516 is ignored due to missing value for phenotype KING_MDS2</span>
+<span class="ansi-magenta-intense-fg">WARNING</span>: <span class="ansi-magenta-intense-fg">Sample NA18522 is ignored due to missing value for phenotype KING_MDS1</span>
+<span class="ansi-magenta-intense-fg">WARNING</span>: <span class="ansi-magenta-intense-fg">Sample NA18522 is ignored due to missing value for phenotype KING_MDS2</span>
+<span class="ansi-magenta-intense-fg">WARNING</span>: <span class="ansi-magenta-intense-fg">Sample NA18870 is ignored due to missing value for phenotype KING_MDS1</span>
+<span class="ansi-magenta-intense-fg">WARNING</span>: <span class="ansi-magenta-intense-fg">Sample NA18870 is ignored due to missing value for phenotype KING_MDS2</span>
+<span class="ansi-magenta-intense-fg">WARNING</span>: <span class="ansi-magenta-intense-fg">Sample NA18871 is ignored due to missing value for phenotype KING_MDS1</span>
+<span class="ansi-magenta-intense-fg">WARNING</span>: <span class="ansi-magenta-intense-fg">Sample NA18871 is ignored due to missing value for phenotype KING_MDS2</span>
+INFO: 196 samples are found
+INFO: 404 groups are found
+Loading genotypes: 100% [==============================] 196 189.2/s in 00:00:01
+Testing for association: 100% [======================] 404/<span class="ansi-red-intense-fg ansi-bold">5</span> 331.1/s in 00:00:01
+INFO: Association tests on 404 groups have completed. 5 failed.
+INFO: Using annotation DB EA_RV as EA_RV in project VATDemo.
+INFO: Annotation database used to record results of association tests. Created on Fri, 29 Jun 2018 22:33:17
+INFO: 404 out of 23269 refGene.refGene.name2 are annotated through annotation database EA_RV
+INFO: Reading from standard input ...
+INFO: Processing 99K of input data ...
+INFO: Generating graph(s) ...
+Genomic inflation factor for method &#39;RVMDS2&#39; is: 1.2732420092267
+INFO: Complete!
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+</div>
+
+
+
+<div class="lan_Bash">
+   
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[86]:</div><div class="inner_cell" >
+  <div class="input_area cm-s-ipython" style="min-height: 2.31429em">
+   <textarea rows="1"
+      class="sos-source" name="Bash">vtools select variant "YRI_mafGD10>=0.05" --samples "RACE=0" -t common_yri </textarea>
+  </div>
+</div>
+
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>INFO: 112 samples are selected by condition: RACE=0
+Collecting sample variants: 100% [======================] 112 1.1K/s in 00:00:00
+Running: 10 1.3K/s in 00:00:00                                                  
+INFO: 1984 variants selected.
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+</div>
+
+
+
+<div class="lan_Bash">
+   
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[87]:</div><div class="inner_cell" >
+  <div class="input_area cm-s-ipython" style="min-height: 2.31429em">
+   <textarea rows="1"
+      class="sos-source" name="Bash">vtools select v_funct "YRI_mafGD10<0.01" --samples "RACE=0" -t rare_yri</textarea>
+  </div>
+</div>
+
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>INFO: 112 samples are selected by condition: RACE=0
+Collecting sample variants: 100% [=====================] 112 868.0/s in 00:00:00
+Running: 9 1.3K/s in 00:00:00                                                   
+INFO: 746 variants selected.
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+</div>
+
+
+
+<div class="lan_Bash">
+   
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[88]:</div><div class="inner_cell" >
+  <div class="input_area cm-s-ipython" style="min-height: 2.31429em">
+   <textarea rows="1"
+      class="sos-source" name="Bash">vtools associate common_yri BMI --covariate SEX --samples "RACE=0" -m "LinRegBurden --alternative 2" -j1 --to_db YA_CV > YA_CV.asso.res</textarea>
+  </div>
+</div>
+
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>INFO: 112 samples are selected by condition: (RACE=0)
+INFO: 1984 groups are found
+Loading genotypes: 100% [===============================] 112 49.1/s in 00:00:02
+Testing for association: 100% [===================] 1,984/<span class="ansi-red-intense-fg ansi-bold">12</span> 523.5/s in 00:00:03
+INFO: Association tests on 1984 groups have completed. 12 failed.
+INFO: Using annotation DB YA_CV as YA_CV in project VATDemo.
+INFO: Annotation database used to record results of association tests. Created on Fri, 29 Jun 2018 22:40:28
+INFO: 1984 out of 6986 variant.chr, variant.pos are annotated through annotation database YA_CV
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+</div>
+
+
+
+<div class="lan_Bash">
+   
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[89]:</div><div class="inner_cell" >
+  <div class="input_area cm-s-ipython" style="min-height: 2.31429em">
+   <textarea rows="1"
+      class="sos-source" name="Bash">vtools associate rare_yri BMI --covariate SEX --samples "RACE=0" -m "LinRegBurden --alternative 2" -g refGene.name2 -j1 --to_db YA_RV > YA_RV.asso.res </textarea>
+  </div>
+</div>
+
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>INFO: 112 samples are selected by condition: (RACE=0)
+INFO: 419 groups are found
+Loading genotypes: 100% [===============================] 112 81.8/s in 00:00:01
+Testing for association: 100% [=====================] 419/<span class="ansi-red-intense-fg ansi-bold">11</span> 495.8/s in 00:00:00
+INFO: Association tests on 419 groups have completed. 11 failed.
+INFO: Using annotation DB YA_RV as YA_RV in project VATDemo.
+INFO: Annotation database used to record results of association tests. Created on Fri, 29 Jun 2018 22:40:37
+INFO: 419 out of 23269 refGene.refGene.name2 are annotated through annotation database YA_RV
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+</div>
+
+
+
+<div class="lan_Bash">
+   
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[90]:</div><div class="inner_cell" >
+  <div class="input_area cm-s-ipython" style="min-height: 3.5285800000000003em">
+   <textarea rows="2"
+      class="sos-source" name="Bash">vtools associate rare_yri BMI --covariate SEX --samples "RACE=0" -m "VariableThresholdsQt --alternative 2 -p 100000 --adaptive 0.0005" \
+    -g refGene.name2 -j1 --to_db YA_RV > YA_RV_VT.asso.res</textarea>
+  </div>
+</div>
+
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>INFO: 112 samples are selected by condition: (RACE=0)
+INFO: 419 groups are found
+Loading genotypes: 100% [==============================] 112 146.5/s in 00:00:00
+Testing for association: 100% [======================] 419/<span class="ansi-red-intense-fg ansi-bold">11</span> 67.9/s in 00:00:06
+INFO: Association tests on 419 groups have completed. 11 failed.
+INFO: Using annotation DB YA_RV as YA_RV in project VATDemo.
+INFO: Annotation database used to record results of association tests. Created on Fri, 29 Jun 2018 22:40:37
+INFO: 419 out of 23269 refGene.refGene.name2 are annotated through annotation database YA_RV
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+</div>
+
+
+
+<div class="lan_Bash">
+   
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[91]:</div><div class="inner_cell" >
+  <div class="input_area cm-s-ipython" style="min-height: 2.31429em">
+   <textarea rows="1"
+      class="sos-source" name="Bash">vtools_report meta_analysis EA_RV_VT.asso.res YA_RV_VT.asso.res --beta 5 --pval 6 --se 7 -n 2 --link 1 > META_RV_VT.asso.res</textarea>
+  </div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+
+
+<div class="lan_Bash">
+   
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[92]:</div><div class="inner_cell" >
+  <div class="input_area cm-s-ipython" style="min-height: 2.31429em">
+   <textarea rows="1"
+      class="sos-source" name="Bash">cut -f1,3 META_RV_VT.asso.res | head</textarea>
+  </div>
+</div>
+
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>refgene_name2	pvalue_meta
+SLC22A14	4.944E-01
+CENPE	6.309E-01
+SDPR	9.020E-01
+CDCA2	4.431E-01
+CEP128	6.827E-01
+ACCN3	3.703E-01
+WNT16	8.432E-01
+TIAM2	2.726E-01
+URB2	9.399E-01
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+</div>
+
+
     </div>
   </div>
 
