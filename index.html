@@ -12115,9 +12115,9 @@ VAT inherits the intuitive command-line interface of Variant Tools (VTools) [8] 
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="RESOURCES">RESOURCES<a class="anchor-link" href="#RESOURCES"></a></h2><p>A list of all commands that are used in this exercise can be found at:</p>
-<p><a href="https://statgen.research.bcm.edu/index.php/Main_Page">https://statgen.research.bcm.edu/index.php/Main_Page</a></p>
-<p>Basic concepts to handle sequence data using vtools can be found at:</p>
+<h2 id="RESOURCES">RESOURCES<a class="anchor-link" href="#RESOURCES"></a></h2><p>To reproduce this tutorial:</p>
+<p><a href="https://github.com/gaow/ismb-2018">https://github.com/gaow/ismb-2018</a></p>
+<p>Basic concepts to handle sequence data using <code>vtools</code> can be found at:</p>
 <p><a href="http://varianttools.sourceforge.net/Main/Concepts">http://varianttools.sourceforge.net/Main/Concepts</a></p>
 <p>VAT Software documentation:</p>
 <p><a href="http://varianttools.sourceforge.net/Main/Documentation">http://varianttools.sourceforge.net/Main/Documentation</a></p>
@@ -12162,7 +12162,7 @@ ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/pilot_data/release/2010_07/exon/snps</p
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Part-I:-Data-Quality-Control,-Annotation-and-Variant/sample-Selection">Part I: Data Quality Control, Annotation and Variant/sample Selection<a class="anchor-link" href="#Part-I:-Data-Quality-Control,-Annotation-and-Variant/sample-Selection"></a></h2><h3 id="1.1-Getting-started">1.1 Getting started<a class="anchor-link" href="#1.1-Getting-started"></a></h3><p>Please navigate to the exercise data directory,</p>
+<h1 id="Part-I:-Data-Quality-Control,-Annotation-and-Variant/sample-Selection">Part I: Data Quality Control, Annotation and Variant/sample Selection<a class="anchor-link" href="#Part-I:-Data-Quality-Control,-Annotation-and-Variant/sample-Selection"></a></h1><h2 id="1.1--Getting-started">1.1  Getting started<a class="anchor-link" href="#1.1--Getting-started"></a></h2><p>Please navigate to the exercise data directory,</p>
 
 </div>
 </div>
@@ -13035,7 +13035,7 @@ NA07051    	CEU.exon...notypes.vcf.gz	3451         	GT,DP_geno
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Variant-Quality-Overview">Variant Quality Overview<a class="anchor-link" href="#Variant-Quality-Overview"></a></h2><p>The following command calculates summary statistics on the variant site depth of coverage (DP). Below is the command to calculate depth of coverage information for all variant sites.</p>
+<h3 id="Variant-Quality-Overview">Variant Quality Overview<a class="anchor-link" href="#Variant-Quality-Overview"></a></h3><p>The following command calculates summary statistics on the variant site depth of coverage (DP). Below is the command to calculate depth of coverage information for all variant sites.</p>
 
 </div>
 </div>
@@ -13077,6 +13077,18 @@ NA07051    	CEU.exon...notypes.vcf.gz	3451         	GT,DP_geno
 </div>
 
 
+  
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>In the test data, the maximum DP for variant sites is 25490, minimum DP 13, average DP about 6815, standard deviation of DP about 3434, lower quartile of DP 4301 and upper quartile of DP 9143.</p>
+<p>The same syntax can be applied to other variant information or annotation information fields. The command <code>vtools output &lt;name of variant table&gt;</code> outputs properties of variants in a specified variant table. The properties include fields from annotation databases and variant tables, basically fields outputted from command <code>vtools show fields</code>, and SQL-supported functions and expressions. There are several freely available SQL resources on the web to learn more about SQL functions and expressions.</p>
+<p>It is also possible to view variant level summary statistic for variants satisfying certain filtering criteria using <code>vtools select &lt;name of variant table&gt;</code> command, for example to count only variants having passed all quality filters:</p>
+
+</div>
+</div>
+</div>
 
 <div class="lan_Bash">
    
@@ -13114,6 +13126,16 @@ NA07051    	CEU.exon...notypes.vcf.gz	3451         	GT,DP_geno
 </div>
 
 
+  
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>All 6987 variants have passed the quality filters. To combine variant filtering and summary statistics:</p>
+
+</div>
+</div>
+</div>
 
 <div class="lan_Bash">
    
@@ -13151,6 +13173,36 @@ NA07051    	CEU.exon...notypes.vcf.gz	3451         	GT,DP_geno
 </div>
 
 
+  
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The output information of command above will be the same as the previous vtools output command, since all variants have passed quality filter.</p>
+
+</div>
+</div>
+</div>
+  
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="1.3--Data-exploration">1.3  Data exploration<a class="anchor-link" href="#1.3--Data-exploration"></a></h2><h3 id="Variant-level-summaries">Variant level summaries<a class="anchor-link" href="#Variant-level-summaries"></a></h3><p>The command below will calculate:</p>
+<ul>
+<li><code>total</code>: Total number of genotypes (GT) for a variant</li>
+<li><code>num</code>: Total number of alternative alleles across all samples</li>
+<li><code>het</code>: Total number of heterozygote genotypes 1/0</li>
+<li><code>hom</code>: Total number of homozygote genotypes 1/1</li>
+<li><code>other</code>: Total number of double-homozygotes 1/2</li>
+<li><code>min/max/meanDP</code>: Summaries for depth of coverage and genotype quality across samples</li>
+<li><code>maf</code>: Minor allele frequency</li>
+<li>Add calculated variant level statistics to <code>fields</code>, which can be shown by commands <code>vtools show fields</code> and <code>vtools show table variant</code></li>
+</ul>
+
+</div>
+</div>
+</div>
 
 <div class="lan_Bash">
    
@@ -13296,6 +13348,27 @@ Number of variants:     6987
 </div>
 
 
+  
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Command <code>vtools update</code> updates variant info fields (and to a lesser extend genotype info fields) by adding more fields or updating values at existing fields. It does not add any new variants or genotypes, and does not change existing variants, samples, or genotypes. Using three parameters <code>--from_file</code>, <code>--from_stat</code>, and <code>--set</code>, variant information fields could be updated from external file, sample genotypes, and existing fields. More details about vtools update command can be found at</p>
+<p><a href="http://varianttools.sourceforge.net/Vtools/Update">http://varianttools.sourceforge.net/Vtools/Update</a></p>
+
+</div>
+</div>
+</div>
+  
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Summaries-for-different-genotype-depth-(GD)-and-genotype-quality-(GQ)-filters">Summaries for different genotype depth (GD) and genotype quality (GQ) filters<a class="anchor-link" href="#Summaries-for-different-genotype-depth-(GD)-and-genotype-quality-(GQ)-filters"></a></h3><p>The <code>--genotypes CONDITION</code> option restricts calculation to genotypes satisfying a given condition. Later we will remove individual genotypes by <code>DP_geno</code> filters. The command below will calculate summary statistics genotypes of all samples per variant site. It can assist us in determining filtering criteria for genotype call quality.</p>
+
+</div>
+</div>
+</div>
 
 <div class="lan_Bash">
    
@@ -13448,6 +13521,17 @@ Number of variants:     6987
 </div>
 
 
+  
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>You will notice the change in genotype counts when applying the filter on genotype depth of coverage and only retaining those genotypes with a read depth greater than 10X. There are now 6976 variant sites after filtering on <code>DP_geno&gt;10</code>. Note that some variant sites will become monomorphic after removing genotypes due to low read depth.</p>
+<h3 id="Minor-allele-frequencies-(MAFs)">Minor allele frequencies (MAFs)<a class="anchor-link" href="#Minor-allele-frequencies-(MAFs)"></a></h3><p>In previous steps, we calculated MAFs for each variant site before and after filtering on genotype read depth. Below is a summary of the results:</p>
+
+</div>
+</div>
+</div>
 
 <div class="lan_Bash">
    
@@ -13504,6 +13588,17 @@ Number of variants:     6987
 </div>
 
 
+  
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Adding “<code>&gt; filename.txt</code>” at the end of the above command will write the output to a file.</p>
+<p>Next, we examine population specific MAFs. Our data is imported from two files, a CEU dataset (90 samples) and an YRI dataset (112 samples). To calculate allele frequency for each population, let us first assign an additional RACE phenotype (0 for YRI samples and 1 for CEU samples):</p>
+
+</div>
+</div>
+</div>
 
 <div class="lan_Bash">
    
@@ -13623,6 +13718,16 @@ NA07346    	CEU.exon...notypes.vcf.gz	.                 	2  	30.978	1
 </div>
 
 
+  
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Population specific MAF calculations will be performed using those genotypes that passed the read depth filter (<code>DP_geno&gt;10</code>).</p>
+
+</div>
+</div>
+</div>
 
 <div class="lan_Bash">
    
@@ -13749,6 +13854,18 @@ INFO: 5167 records are updated
 </div>
 
 
+  
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>You will observe zero values because some variant sites are monomorphic or they are population specific.</p>
+<h3 id="Sample-level-genotype-summaries">Sample level genotype summaries<a class="anchor-link" href="#Sample-level-genotype-summaries"></a></h3><p>Similar operations could be performed on a sample level instead of on a variant level. More details about obtaining genotype level summary information using <code>vtools phenotype --from_stat</code> can be found at</p>
+<p><a href="http://varianttools.sourceforge.net/Vtools/Phenotype">http://varianttools.sourceforge.net/Vtools/Phenotype</a></p>
+
+</div>
+</div>
+</div>
 
 <div class="lan_Bash">
    
@@ -14061,15 +14178,27 @@ NA19266	NA	NA	4878	1211
 </div>
 
 
+  
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="1.4--Variant-Annotation">1.4  Variant Annotation<a class="anchor-link" href="#1.4--Variant-Annotation"></a></h2><p>For rare variant aggregated association tests, we want to focus on analyzing aggregating variants having potential functional contribution to a phenotype. Thus, each variant site needs to be annotated for its functionality. Annotation is performed using <code>variant annotation tools</code> [7] which implements an <code>ANNOVAR</code> pipeline for variant function annotation [9]. More details about the ANNOVAR pipeline can be found at</p>
+<p><a href="http://varianttools.sourceforge.net/Pipeline/Annovar">http://varianttools.sourceforge.net/Pipeline/Annovar</a></p>
+
+</div>
+</div>
+</div>
 
 <div class="lan_Bash">
    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[47]:</div><div class="inner_cell" >
-  <div class="input_area cm-s-ipython" style="min-height: 3.5285800000000003em">
-   <textarea rows="2"
-      class="sos-source" name="Bash">export PATH=/home/gaow/tmp/29-Jun-2018/annovar:$PATH
+  <div class="input_area cm-s-ipython" style="min-height: 4.74287em">
+   <textarea rows="3"
+      class="sos-source" name="Bash"># You need to download and install `annovar`
+export PATH=/home/gaow/tmp/29-Jun-2018/annovar:$PATH
 vtools execute ANNOVAR geneanno</textarea>
   </div>
 </div>
@@ -14125,6 +14254,16 @@ INFO: Execution of pipeline ANNOVAR.geneanno is successful with output /home/gao
 </div>
 
 
+  
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The following command will output the annotated variant sites to the screen.</p>
+
+</div>
+</div>
+</div>
 
 <div class="lan_Bash">
    
@@ -14181,6 +14320,20 @@ INFO: Execution of pipeline ANNOVAR.geneanno is successful with output /home/gao
 </div>
 
 
+  
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Many more annotation sources are available which are not covered in this tutorial. Please read</p>
+<p><a href="http://varianttools.sourceforge.net/Annotation">http://varianttools.sourceforge.net/Annotation</a></p>
+<p>for annotation databases, and</p>
+<p><a href="http://varianttools.sourceforge.net/Pipeline">http://varianttools.sourceforge.net/Pipeline</a> for annotation pipelines.</p>
+<h2 id="1.5--Data-Quality-Control-(QC)-and-Variant-Selection">1.5  Data Quality Control (QC) and Variant Selection<a class="anchor-link" href="#1.5--Data-Quality-Control-(QC)-and-Variant-Selection"></a></h2><h3 id="Ti/Tv-ratio-evaluations">Ti/Tv ratio evaluations<a class="anchor-link" href="#Ti/Tv-ratio-evaluations"></a></h3><p>Before performing any data QC we examine the transition/transversion (Ti/Tv) ratio for all variant sites. Note that here we are obtaining Ti/Tv ratios for the entire sample, Ti/Tv ratios can also be obtained for each sample.</p>
+
+</div>
+</div>
+</div>
 
 <div class="lan_Bash">
    
@@ -14218,6 +14371,18 @@ INFO: Execution of pipeline ANNOVAR.geneanno is successful with output /home/gao
 </div>
 
 
+  
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The command above counts the number of transition and transversion variants and calculates its ratio. More details about <code>vtools report trans_ratio</code> command can be found at</p>
+<p><a href="http://varianttools.sourceforge.net/VtoolsReport/TransRatio">http://varianttools.sourceforge.net/VtoolsReport/TransRatio</a></p>
+<p>If only genotype calls having depth of coverage greater than 10 are considered:</p>
+
+</div>
+</div>
+</div>
 
 <div class="lan_Bash">
    
@@ -14255,6 +14420,17 @@ INFO: Execution of pipeline ANNOVAR.geneanno is successful with output /home/gao
 </div>
 
 
+  
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We can see that Ti/Tv ratio has increase slightly if low depth of coverage calls are removed. There is only a small change in the Ti/Tv ratio since only a few variant sites become monomorphic and are no longer included in the calculation. In practice Ti/Tv ratios can be used to evaluate which threshold should be used in data QC.</p>
+<h3 id="Removal-of-low-quality-variant-sites">Removal of low quality variant sites<a class="anchor-link" href="#Removal-of-low-quality-variant-sites"></a></h3><p>We should not need to remove any variant site based on read depth because all variants passed the quality filter. To demonstrate removal of variant sites, let us remove those with a total read depth <code>DP&lt;15</code>:</p>
+
+</div>
+</div>
+</div>
 
 <div class="lan_Bash">
    
@@ -14387,6 +14563,19 @@ variant           6,986    Jun29 Master variant table
 </div>
 
 
+  
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We can see that one variant site has been removed from master variant table. The <code>vtools remove</code> command can remove various items from the current project. More details about <code>vtools remove</code> command can be found at:</p>
+<p><a href="http://varianttools.sourceforge.net/Vtools/Remove">http://varianttools.sourceforge.net/Vtools/Remove</a></p>
+<p>Using a combination of select/remove subcommands low quality variant sites can be easily filtered out. The <code>vtools show fields</code>, <code>vtools show tables</code>, and <code>vtools show table variant</code> commands will allow you to see the new/updated fields and tables you have added/changed to the project.</p>
+<h3 id="Filter-genotype-calls-by-quality">Filter genotype calls by quality<a class="anchor-link" href="#Filter-genotype-calls-by-quality"></a></h3><p>We have calculated various summary statistics using the command <code>--genotypes CONDITION</code> but we have not yet removed genotypes having genotype read depth of coverage lower than 10X. The command below removes these genotypes.</p>
+
+</div>
+</div>
+</div>
 
 <div class="lan_Bash">
    
@@ -14405,6 +14594,16 @@ variant           6,986    Jun29 Master variant table
 </div>
 
 
+  
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Select-variants-by-annotated-functionality">Select variants by annotated functionality<a class="anchor-link" href="#Select-variants-by-annotated-functionality"></a></h3><p>To select potentially functional variants for association mapping:</p>
+
+</div>
+</div>
+</div>
 
 <div class="lan_Bash">
    
@@ -14481,6 +14680,26 @@ variant           6,986    Jun29 Master variant table
 </div>
 
 
+  
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The command above selects variant sites that are either nonsynonymous (by condition <code>mut_type like ’non%’</code>) or stop-gain/stop-loss (by condition <code>mut_type like ’stop%’</code>) or alternative splicing (by condition <code>region-type=’splicing’</code>)</p>
+<p>3367 functional variant sites are selected.</p>
+
+</div>
+</div>
+</div>
+  
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Part-II:-Association-Tests-for-Quantitative-Traits">Part II: Association Tests for Quantitative Traits<a class="anchor-link" href="#Part-II:-Association-Tests-for-Quantitative-Traits"></a></h1><h2 id="2.1--View-phenotype-data">2.1  View phenotype data<a class="anchor-link" href="#2.1--View-phenotype-data"></a></h2>
+</div>
+</div>
+</div>
 
 <div class="lan_Bash">
    
@@ -14523,6 +14742,17 @@ NA06994    	CEU.exon...notypes.vcf.gz	ABI_SOLID+ILLUMINA	1  	23.858	1   	1730   
 </div>
 
 
+  
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="2.2--Analysis-plan">2.2  Analysis plan<a class="anchor-link" href="#2.2--Analysis-plan"></a></h2><p>We want to carry out the association analysis for CEU and YRI separately. For starters we demonstrate analysis of CEU samples; and the same commands will be applicable for YRI samples. After completing the analysis of CEU samples please use the same commands to analyze the YRI data set. You should not analyze the data from different populations together, once you have the p-values from each analysis, you may perform a meta-analysis.</p>
+<h2 id="2.3--Subset-data-by-MAFs">2.3  Subset data by MAFs<a class="anchor-link" href="#2.3--Subset-data-by-MAFs"></a></h2><p>To carry out association tests we need to treat common and rare variants separately. The dataset for our tutorial has very small sample size, but with large sample size it is reasonable to define rare variants as having observed MAF&lt;0.01, and common variants as variants having observed MAF$\ge$0.05. First, we create variant tables based on calculated alternative allele frequencies for both populations</p>
+
+</div>
+</div>
+</div>
 
 <div class="lan_Bash">
    
@@ -14602,6 +14832,17 @@ INFO: 602 variants selected.
 </div>
 
 
+  
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Notice that for selection of rare variants we only keep those that are annotated as functional (chosen from <code>v_funct</code> table). There are 1450 and 604 variant sites selected for MAF0.05 and MAF&lt;0.01, respectively.</p>
+<h2 id="2.4--Annotate-variants-to-genes">2.4  Annotate variants to genes<a class="anchor-link" href="#2.4--Annotate-variants-to-genes"></a></h2><p>For gene based rare variant analysis we need annotations that tell us the boundaries of genes. We use the refGene annotation database for this purpose.</p>
+
+</div>
+</div>
+</div>
 
 <div class="lan_Bash">
    
@@ -14692,6 +14933,27 @@ Reference genome hg19:  chr, txStart, txEnd
 </div>
 
 
+  
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The names of genes are contained in the <code>refGene.name2</code> field. The <code>vtools use</code> command, attaches an annotation database to the project, effectively incorporating one or more attributes available to variants in the project. More details about <code>vtools use</code> command can be found at</p>
+<p><a href="http://varianttools.sourceforge.net/Vtools/Use">http://varianttools.sourceforge.net/Vtools/Use</a></p>
+
+</div>
+</div>
+</div>
+  
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="2.5--Association-testing-of-common/rare-variants">2.5  Association testing of common/rare variants<a class="anchor-link" href="#2.5--Association-testing-of-common/rare-variants"></a></h2><p>The association test program suite is implemented as the <code>vtools associate</code> subcommand. To list available association test options</p>
+
+</div>
+</div>
+</div>
 
 <div class="lan_Bash">
    
@@ -15034,6 +15296,18 @@ optional arguments:
 </div>
 
 
+  
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Note that we use the quantitative trait BMI as the phenotype, and we will account for “SEX” as a covariate in the regression framework. More details about <code>vtools associate</code> command can be found at</p>
+<p><a href="http://varianttools.sourceforge.net/Vtools/Associate">http://varianttools.sourceforge.net/Vtools/Associate</a></p>
+<h3 id="Analysis-of-common-variants">Analysis of common variants<a class="anchor-link" href="#Analysis-of-common-variants"></a></h3><p>By default, the program will perform single variant tests using a simple linear model, and the Wald test statistic will be evaluated for p-values:</p>
+
+</div>
+</div>
+</div>
 
 <div class="lan_Bash">
    
@@ -15077,6 +15351,17 @@ INFO: 1450 out of 6986 variant.chr, variant.pos are annotated through annotation
 </div>
 
 
+  
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Option <code>-j1</code> specifies that 1 CPU core be used for association testing. You may use larger number of jobs for real world data analysis, e.g., use <code>-j16</code> if your computational resources has 16 CPU cores available. Linux command <code>cat /proc/cpuinfo</code> shows the number of cores and other information related to the CPU on your computer.</p>
+<p>The following command displays error messages about the failed tests. In each case, the sample size was too small to perform the regression analysis.</p>
+
+</div>
+</div>
+</div>
 
 <div class="lan_Bash">
    
@@ -15122,6 +15407,16 @@ INFO: 1450 out of 6986 variant.chr, variant.pos are annotated through annotation
 </div>
 
 
+  
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>A summary from the association test is written to the file <code>EA_CV.asso.res</code>. The first column indicates the variant chromosome and base pair position so that you may follow up on the top signals using various annotation sources that we will not introduce in this tutorial. The result will be automatically built into annotation database if <code>--to_db</code> option is specified.</p>
+
+</div>
+</div>
+</div>
 
 <div class="lan_Bash">
    
@@ -15167,6 +15462,16 @@ INFO: 1450 out of 6986 variant.chr, variant.pos are annotated through annotation
 </div>
 
 
+  
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>To sort the results by p-value and output the first 10 lines of the file use the command:</p>
+
+</div>
+</div>
+</div>
 
 <div class="lan_Bash">
    
@@ -15214,6 +15519,49 @@ sort: write error
 </div>
 
 
+  
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>If you obtain significant p-values be sure to also observe the accompanying sample size. Significant p-values from too small of a sample size may not be results you can trust.</p>
+<p>Also, depending on your phenotype you may have to add additional covariates to your analysis. VAT allows you to test many different models for the various phenotypes and covariates. P-values for covariates are also reported.</p>
+<p>Similar to using an annotation database, you can use the results from the association test to annotate the project and follow up variants of interest, for example:</p>
+
+</div>
+</div>
+</div>
+
+<div class="lan_Bash">
+   
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div><div class="inner_cell" >
+  <div class="input_area cm-s-ipython" style="min-height: 2.31429em">
+   <textarea rows="1"
+      class="sos-source" name="Bash">vtools show fields</textarea>
+  </div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+
+  
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>You see additional annotation fields starting with EA CV, the name of the annotation database you just created from association test (if you used the --to db option mentioned above). You can use them to easily select/output variants of interest. More details about outputting annotation fields for significant findings can be found at</p>
+<p><a href="http://varianttools.sourceforge.net/Vtools/Output">http://varianttools.sourceforge.net/Vtools/Output</a></p>
+<h3 id="Burden-test-for-rare-variants-(BRV)">Burden test for rare variants (BRV)<a class="anchor-link" href="#Burden-test-for-rare-variants-(BRV)"></a></h3><p>BRV method uses the count of rare variants in given genetic region for association analysis, regardless of the region length.</p>
+<p>We use the <code>-g</code> option and use the ‘refGene.name2’ field to define the boundaries of a gene. By default, the test is a linear regression using aggregated counts of variants in a gene region as the regressor.</p>
+
+</div>
+</div>
+</div>
 
 <div class="lan_Bash">
    
@@ -15257,6 +15605,16 @@ INFO: 404 out of 23269 refGene.refGene.name2 are annotated through annotation da
 </div>
 
 
+  
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Association tests on 254 groups have completed. 20 failed. To view failed tests:</p>
+
+</div>
+</div>
+</div>
 
 <div class="lan_Bash">
    
@@ -15302,6 +15660,16 @@ INFO: 404 out of 23269 refGene.refGene.name2 are annotated through annotation da
 </div>
 
 
+  
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The output file is <code>EA_RV.asso.res</code>. The first column is the gene name, with corresponding p-values in the sixth column for the entire gene.</p>
+
+</div>
+</div>
+</div>
 
 <div class="lan_Bash">
    
@@ -15347,6 +15715,16 @@ AHNAK        	89                      	4                        	4              
 </div>
 
 
+  
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>You can also sort these results by p-value using command:</p>
+
+</div>
+</div>
+</div>
 
 <div class="lan_Bash">
    
@@ -15394,6 +15772,18 @@ sort: write error
 </div>
 
 
+  
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Variable-thresholds-test-for-rare-variants-(VT)">Variable thresholds test for rare variants (VT)<a class="anchor-link" href="#Variable-thresholds-test-for-rare-variants-(VT)"></a></h3><p>The variable thresholds (VT) method will carry out multiple testing in the same gene region using groups of variants based on observed variant allele frequencies. This test will maximize over statistics thus obtain a final test statistic, and calculate the empirical p-value so that multiple comparisons are adjusted for correctly.</p>
+<p>We will use adaptive permutation to obtain empirical p-values. Therefore, to avoid performing too large number of permutations we use a cutoff to limit the number of permutations when the p-value is greater than 0.0005, e.g. not all 100,000 permutations are performed. Generally, even more permutations are used but we limit it to 100,000 to save time for this exercise.</p>
+<p>The command using variable thresholds method on our data is:</p>
+
+</div>
+</div>
+</div>
 
 <div class="lan_Bash">
    
@@ -15438,6 +15828,16 @@ INFO: 404 out of 23269 refGene.refGene.name2 are annotated through annotation da
 </div>
 
 
+  
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>To view test that failed,</p>
+
+</div>
+</div>
+</div>
 
 <div class="lan_Bash">
    
@@ -15477,6 +15877,24 @@ INFO: 404 out of 23269 refGene.refGene.name2 are annotated through annotation da
 </div>
 
 </div>
+</div>
+
+</div>
+</div>
+
+
+
+<div class="lan_Bash">
+   
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div><div class="inner_cell" >
+  <div class="input_area cm-s-ipython" style="min-height: 2.31429em">
+   <textarea rows="1"
+      class="sos-source" name="Bash">To view results,</textarea>
+  </div>
+</div>
+
 </div>
 
 </div>
@@ -15528,6 +15946,16 @@ AHNAK        	89              	4                	4             	-1.18887   	0.76
 </div>
 
 
+  
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Sort and output the lowest p-values using the command:</p>
+
+</div>
+</div>
+</div>
 
 <div class="lan_Bash">
    
@@ -15573,16 +16001,26 @@ PDSS1        	55              	1                	1             	-11.7564   	0.03
 </div>
 
 
+  
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Why-do-some-tests-fail?">Why do some tests fail?<a class="anchor-link" href="#Why-do-some-tests-fail?"></a></h3><p>Notice that <code>vtools associate</code> command will fail on some association test units. Instances of failure are printed to terminal in red and are recorded in the project log file. Most failures occur due to an association test unit having too few samples or number of variants (for gene based analysis). You should view these error messages after each association scan is complete, e.g., using the Linux command <code>grep -i error *.log</code> and make sure you are informed of why failures occur.</p>
+<p>In the variable thresholds analysis above, gene ABCC1 failed the association test. If we look at this gene more closely we can see which variants are being analyzed by our test:</p>
+
+</div>
+</div>
+</div>
 
 <div class="lan_Bash">
    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[79]:</div><div class="inner_cell" >
-  <div class="input_area cm-s-ipython" style="min-height: 3.5285800000000003em">
-   <textarea rows="2"
-      class="sos-source" name="Bash">vtools_report plot_association qq -o QQRV -b --label_top 2 -f 6 < EA_RV.asso.res
-vtools_report plot_association manhattan -o MHRV -b --label_top 5 --color Dark2 --chrom_prefix None -f 6 < EA_RV.asso.res</textarea>
+  <div class="input_area cm-s-ipython" style="min-height: 2.31429em">
+   <textarea rows="1"
+      class="sos-source" name="Bash">vtools select rare_ceu "refGene.name2='ABCC1'" -o chr pos ref alt CEU_mafGD10 numGD10 mut_type --header</textarea>
   </div>
 </div>
 
@@ -15634,8 +16072,32 @@ INFO: Complete!
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Need to download PLINK 1.07 <a href="http://zzz.bwh.harvard.edu/plink/dist/plink-1.07-x86_64.zip">http://zzz.bwh.harvard.edu/plink/dist/plink-1.07-x86_64.zip</a>
-and KING <a href="http://people.virginia.edu/~wc9c/KING/executables/Linux-king214.tar.gz">http://people.virginia.edu/~wc9c/KING/executables/Linux-king214.tar.gz</a></p>
+<p>After applying our QC filters we are left with one variant within the ABCC1 gene to analyze. Because the MAF for this variant is 0.0 there are no variants in the gene to analyze so that this gene is ignored. Note that all individuals are homozygous for the alternative allele for this variant site.</p>
+<h3 id="QQ-and-Manhattan-plots-for-association-results">QQ and Manhattan plots for association results<a class="anchor-link" href="#QQ-and-Manhattan-plots-for-association-results"></a></h3><p>The vtools report plot association command generates QQ and Manhattan plots from output of vtools associate command. More details about vtools report plot association can be found at</p>
+<p><a href="http://varianttools.sourceforge.net/VtoolsReport/PlotAssociation">http://varianttools.sourceforge.net/VtoolsReport/PlotAssociation</a></p>
+
+</div>
+</div>
+</div>
+  
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>vtools_report plot_association qq -o QQRV -b --label_top 2 -f 6 &lt; EA_RV.asso.res
+vtools_report plot_association manhattan -o MHRV -b --label_top 5 --color Dark2 --chrom_prefix None -f 6 &lt; EA_RV.asso.res</p>
+
+</div>
+</div>
+</div>
+  
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>QQ plots aid in evaluating if there is systematic inflation of test statistics. A common cause of inflation is population structure or batch effects.  If you observe significant inflation of test you may consider including MDS components in the association test model.</p>
+<h3 id="MDS-analysis-and-PC-adjustment">MDS analysis and PC adjustment<a class="anchor-link" href="#MDS-analysis-and-PC-adjustment"></a></h3><p>This pipeline needs <a href="http://zzz.bwh.harvard.edu/plink/dist/plink-1.07-x86_64.zip">PLINK 1.07</a>
+and <a href="http://people.virginia.edu/~wc9c/KING/executables/Linux-king214.tar.gz">KING</a>.</p>
 
 </div>
 </div>
@@ -15756,6 +16218,17 @@ INFO: Execution of pipeline KING.king is successful with output KING.RelatedIndi
 </div>
 
 
+  
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>You should not arbitrarily include MDS (or PCA) components in the analysis.  Instead put in each MDS component and examine the lambda value, i.e. include MDS component 1 them MDS components 1 and 2, etc. Visualization of the QQ plot is also useful to determine if population substructure/admixture is controlled.</p>
+<h2 id="2.6--Association-analysis-of-YRI-samples">2.6  Association analysis of YRI samples<a class="anchor-link" href="#2.6--Association-analysis-of-YRI-samples"></a></h2><p>Procedures for YRI sample association analysis is the same as for CEU samples as previously has been described, thus is left as an extra exercise for you to work on your own. Commands to perform analysis for YRI are found below:</p>
+
+</div>
+</div>
+</div>
 
 <div class="lan_Bash">
    
@@ -16042,6 +16515,18 @@ INFO: 419 out of 23269 refGene.refGene.name2 are annotated through annotation da
 </div>
 
 
+  
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="2.7--Meta-analysis">2.7  Meta-analysis<a class="anchor-link" href="#2.7--Meta-analysis"></a></h2><p>Here we demonstrate the application of meta-analysis to combine association results from the two populations via <code>vtools report meta_analysis</code>. More details about <code>vtools report meta_analysis</code> command can be found at</p>
+<p><a href="http://varianttools.sourceforge.net/VtoolsReport/MetaAnalysis">http://varianttools.sourceforge.net/VtoolsReport/MetaAnalysis</a></p>
+<p>The input to this command are the association results files generated from previous steps, for example:</p>
+
+</div>
+</div>
+</div>
 
 <div class="lan_Bash">
    
@@ -16051,6 +16536,24 @@ INFO: 419 out of 23269 refGene.refGene.name2 are annotated through annotation da
   <div class="input_area cm-s-ipython" style="min-height: 2.31429em">
    <textarea rows="1"
       class="sos-source" name="Bash">vtools_report meta_analysis EA_RV_VT.asso.res YA_RV_VT.asso.res --beta 5 --pval 6 --se 7 -n 2 --link 1 > META_RV_VT.asso.res</textarea>
+  </div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+
+
+<div class="lan_Bash">
+   
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div><div class="inner_cell" >
+  <div class="input_area cm-s-ipython" style="min-height: 2.31429em">
+   <textarea rows="1"
+      class="sos-source" name="Bash">To view the results,</textarea>
   </div>
 </div>
 
@@ -16105,6 +16608,46 @@ URB2	9.399E-01
 </div>
 
 
+  
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Note that for genes that only appears in one study but not the other, or only have a valid p-value in one study but not the other, will be ignored from meta-analysis.</p>
+<h2 id="2.8--Summary">2.8  Summary<a class="anchor-link" href="#2.8--Summary"></a></h2><p>Analyzing variants with VAT is much like any other analysis software with a general workflow of:</p>
+<ul>
+<li>Variant level cleaning</li>
+<li>Sample genotype cleaning</li>
+<li>Variant annotation and phenotype information processing</li>
+<li>Sample/variant selection</li>
+<li>Association analysis</li>
+<li>Interpreting the findings</li>
+</ul>
+<p>The data cleaning and filtering conditions within this exercise should be considered as general guidelines. Your data may allow you to be laxer with certain criteria or force you to be more stringent with others.</p>
+
+</div>
+</div>
+</div>
+  
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="References">References<a class="anchor-link" href="#References"></a></h1><p>[1]Wang, G.T., Peng, B., and Leal, S.M. (2014). Variant Association Tools for Quality Control and Analysis of Large-Scale Sequence and Genotyping Array Data. Am. J. Hum. Genet. 94, 770783</p>
+<p>[2]Li B, Leal SM. Methods for detecting associations with rare variants for common diseases: application to analysis of sequence data. Am J Hum Genet 2008 83:311-21</p>
+<p>[3]Auer PL, Wang G, Leal SM. Testing for rare variant associations in the presence of missing data. Genet Epidemiol 2013 37:529-38</p>
+<p>[4]Liu DJ, Leal SM. A novel adaptive method for the analysis of next-generation sequencing data to detect com-plex trait associations with rare variants due to gene main effects and interactions. PLoS Genet 2010 6:e1001156</p>
+<p>[5]Madsen BE, Browning SR. A groupwise association test for rare mutations using a weighted sum statistic. PLoS Genet 2009 5:e1000384</p>
+<p>[6]Price AL, Kryukov GV, de Bakker PI, Purcell SM, Staples J, Wei LJ, Sunyaev SR. Pooled association tests for rare variants in exon-resequencing studies. Am J Hum Genet 20010 86:832-8</p>
+<p>[7]Wu MC, Lee S, Cai T, Li Y, Boehnke M, Lin X. Rare-variant association testing for sequencing data with the sequence kernel association test. Am J Hum Genet 2011 89:82-93</p>
+<p>[8]Lucas FAS, Wang G, Scheet P, Peng B. Integrated annotation and analysis of genetic variants from next-generation sequencing studies with variant tools. Bioinformatics 2012 28:421-2</p>
+<p>[9]Wang K, Li M, Hakonarson H. ANNOVAR: functional annotation of genetic variants from high-throughput sequencing data. Nucleic Acids Res 2010 38:e164</p>
+<p>[10]Manichaikul A, Mychaleckyj JC, Rich SS, Daly K, Sale M, Chen WM. Robust relationship inference in genome-wide association studies. Bioinformatics 2010 26(22):2867-2873</p>
+<p>[11]Purcell S, Neale B, Todd-Brown K, Thomas L, Ferreira MAR, Bender D, Maller J, Sklar P, de Bakker PIW, Daly MJ &amp; Sham PC. PLINK: a toolset for whole-genome association and population-based linkage analysis. Am J Hum Genet, 2007 81:559-75</p>
+
+</div>
+</div>
+</div>
     </div>
   </div>
 
