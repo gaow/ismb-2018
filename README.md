@@ -1,5 +1,7 @@
 ## Welcome to the Variant Association Tools (VAT) tutorial session at ISMB 2018
 
+(c) 2018 Gao Wang and Suzanne Leal
+
 To run the live demo as I'll be doing at the tutorial session, you need two software packages:
 
 1. [SoS Notebook](https://vatlab.github.io/sos-docs/#Documentation)
